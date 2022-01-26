@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubbles
       objectReference: {fileID: 0}
+    - target: {fileID: 1801604868145782, guid: e969aaa734be044efad60bd50e7fb070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4537175568883932, guid: e969aaa734be044efad60bd50e7fb070, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -351,7 +355,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &409514345
