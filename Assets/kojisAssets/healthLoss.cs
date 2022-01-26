@@ -48,12 +48,19 @@ public class healthLoss : MonoBehaviour
         // kills the player
     {
         // Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+       // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
+
+
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Obstacle"))
+            lowerHealth();
 
     }
 
 
-    void Update()
+        void Update()
     {
         // 
         if (my_fish.transform.position.x > 3)
