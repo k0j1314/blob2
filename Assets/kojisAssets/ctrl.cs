@@ -1,19 +1,32 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class ctrl : MonoBehaviour
 {
     public float speed = 1.5f;
+    private SpriteRenderer mySpriteRenderer;
+
+
+    void Start()
+    {
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+
 
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+            mySpriteRenderer.flipX = true;
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
+            mySpriteRenderer.flipX = false;
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
@@ -22,6 +35,7 @@ public class ctrl : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
+
         }
     }
 
