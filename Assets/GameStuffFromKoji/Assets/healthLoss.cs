@@ -48,7 +48,7 @@ public class healthLoss : MonoBehaviour
         // kills the player
     {
         // Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
 
     }
 
