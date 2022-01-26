@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SGameMain : MonoBehaviour
-{   
+{
     //add a button disable while simonsaying?
-
+    public bool SGWin;
 
     //list of buttons   
     public GameObject SBRed; // 1
@@ -16,7 +16,7 @@ public class SGameMain : MonoBehaviour
     public int counter=0;
     private int currButt;
     public int rounds;
-
+  
     public int puzzleLength;
 
     public int[] simonSaying;
@@ -59,17 +59,32 @@ public class SGameMain : MonoBehaviour
          SBYellow.GetComponent<Image>().color= new Color(.71f,.69f,.17f,1);
     }
 
+    public void DisableButtons()
+    {
+        SBYellow.GetComponent<Button>().enabled = false;
+        SBBlue.GetComponent<Button>().enabled = false;
+        SBGreen.GetComponent<Button>().enabled = false;
+        SBRed.GetComponent<Button>().enabled = false;
+        SBRed.GetComponent<Image>().color = new Color(1, 1, 1, 0);//highlight
+        SBBlue.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        SBGreen.GetComponent<Image>().color = new Color(1, 1, 1, 0); //26,202,64,1)
+        SBYellow.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+    }
 
     public void ifSame(){
         if(currButt==simonSaying[counter]){
             counter++;
-            if(rounds==puzzleLength){
-                print("you win!");
-                //break out, disable, go to Koji's code
-            }
             if(rounds == counter){
-                counter=0;    
-                StartCoroutine("showPattern");
+                if (rounds == puzzleLength)
+                {
+                    print("you win!");
+                    SimonWin();
+                }
+                else{
+                    counter = 0;
+                    StartCoroutine("showPattern");
+                }
+                
                 
             }
         }
@@ -112,12 +127,18 @@ public class SGameMain : MonoBehaviour
         }
     }
 
+    public void SimonWin()
+    {
+        Invoke("DisableButtons", 0.5f);
+        SGWin = true;
 
+    }
     void Start(){
         simonSaying= new int[puzzleLength];
         for(int i=0; i<puzzleLength; i++){
             simonSaying[i]=Random.Range(1,5);
         }
+        SGWin = false;
         StartCoroutine("showPattern");
     }
 
