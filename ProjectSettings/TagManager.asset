@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Walls
-  - Obstacle
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -42,23 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-<<<<<<< HEAD
-    uniqueID: 839284263
-    locked: 0
-  - name: midground
-    uniqueID: 1399948539
-    locked: 0
-  - name: front
-    uniqueID: 1619564067
-=======
-    uniqueID: 3745285275
-    locked: 0
-  - name: middleground
-    uniqueID: 771395767
-    locked: 0
-  - name: foreground
-    uniqueID: 3305580145
->>>>>>> kojiBranch
     locked: 0
