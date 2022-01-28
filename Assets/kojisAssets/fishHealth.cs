@@ -13,12 +13,12 @@ public class fishHealth : MonoBehaviour
     public GameObject damageScreen;
     int healthRemaining;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {
         healthRemaining = int.Parse(healthNumber.text);
-
+        
     }
 
     // Update is called once per frame
@@ -63,11 +63,23 @@ public class fishHealth : MonoBehaviour
     void Update()
     {
         // 
+        Vector3 p = transform.position;
+
+
         if (my_fish.transform.position.x > 3)
             lowerHealth();
 
         if (my_fish.transform.position.y > 10 && damageScreen.GetComponent<Image>().color.a <= 0)
             tooHigh();
+
+        if (p.y < -75f)
+        {
+            p.y = -75f;
+            transform.position = p;
+        }
+
+
+
 
         if (damageScreen.GetComponent<Image>().color.a > 0)
         {

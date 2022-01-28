@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ReaganJunkPile/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/kojisAssets/Scenes/kojiScene.unity
+    guid: c3bedfa1759baf94e8681fb36b6313a5
   m_configObjects: {}
