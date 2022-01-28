@@ -213,6 +213,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9068830691660529203, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068830692419867194, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068830692419867194, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: b42ba39654415f24cae81755f639767a, type: 3}
+    - target: {fileID: 9068830692419867194, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068830692419867194, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9068830692557731049, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -301,5 +321,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9068830691552345846, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+--- !u!1 &1145151627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9068830691552345848, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+  m_PrefabInstance: {fileID: 863279831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1145151628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145151627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42ba39654415f24cae81755f639767a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
