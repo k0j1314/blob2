@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SGameMain : MonoBehaviour
 {
@@ -107,23 +108,27 @@ public class SGameMain : MonoBehaviour
                 SBRed.GetComponent<Image>().color= new Color(.97f,.078f,.078f,1);//highlight
                 yield return new WaitForSeconds(0.5f);//add f for fractions of a second (0.5f)
                 SBRed.GetComponent<Image>().color= new Color(0.6f,0,0,1);
-           }
+                yield return new WaitForSeconds(0.5f);
+            }
          if( simonSaying[i]==2){
                 SBGreen.GetComponent<Image>().color= new Color(.11f,.79f,.25f,1);
                 yield return new WaitForSeconds(0.5f);
                 SBGreen.GetComponent<Image>().color= new Color(.03f,.47f,.13f,1);
-           }
+                yield return new WaitForSeconds(0.5f);
+            }
          if( simonSaying[i]==3){
                 SBBlue.GetComponent<Image>().color= new Color(.13f,.27f,.819f,1);
                 yield return new WaitForSeconds(0.5f);
                 SBBlue.GetComponent<Image>().color= new Color(.02f,.11f,.44f,1);
-           }
+                yield return new WaitForSeconds(0.5f);
+            }
          if( simonSaying[i]==4){
                 SBYellow.GetComponent<Image>().color= new Color(.86f,.89f,.11f,1);
                 yield return new WaitForSeconds(0.5f);
                 SBYellow.GetComponent<Image>().color= new Color(.71f,.69f,.17f,1);
-                
-           }
+                yield return new WaitForSeconds(0.5f);
+
+            }
         }
     }
 
@@ -131,6 +136,8 @@ public class SGameMain : MonoBehaviour
     {
         Invoke("DisableButtons", 0.5f);
         SGWin = true;
+        SceneManager.LoadScene("kojiScene");
+        
 
     }
     void Start(){

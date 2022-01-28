@@ -702,7 +702,7 @@ MonoBehaviour:
   SBYellow: {fileID: 1508553491}
   counter: 0
   rounds: 0
-  puzzleLength: 5
+  puzzleLength: 3
   simonSaying: 
 --- !u!1 &718551511
 GameObject:
