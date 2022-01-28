@@ -29,7 +29,10 @@ public class InitiateGame : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        
+    {
+        if (SGameMain.SGWin == true)
+        {
+            Destroy(gameObject);
+        }
     }
 }

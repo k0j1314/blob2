@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SGameMain : MonoBehaviour
 {
     //add a button disable while simonsaying?
-    public bool SGWin;
+    public static bool SGWin;
 
     //list of buttons   
     public GameObject SBRed; // 1
