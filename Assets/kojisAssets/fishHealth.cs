@@ -9,16 +9,21 @@ public class fishHealth : MonoBehaviour
 
     public Text healthNumber;
     public GameObject my_fish;
+    public GameObject heightIndicator;
+    static int health = 3;
 
     public GameObject damageScreen;
-    int healthRemaining;
+    int healthRemaining ;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        healthRemaining = int.Parse(healthNumber.text);
-        
+        healthRemaining = health;
+       // healthRemaining = int.Parse(healthNumber.text);
+        health = healthRemaining;
+        healthNumber.text = healthRemaining.ToString();
+
     }
 
     // Update is called once per frame
@@ -35,7 +40,10 @@ public class fishHealth : MonoBehaviour
     // lowers player health by 1 and displays it on the screen
     {
         healthRemaining -= 1;
+        health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
+        // TODO: save the value when changing scenes so that  it doesnt go back to 3 after a game
+
 
         if (healthRemaining <= 0)
         {
@@ -64,13 +72,19 @@ public class fishHealth : MonoBehaviour
     {
         // 
         Vector3 p = transform.position;
+        float height = heightIndicator.transform.position.y;
 
 
-        if (my_fish.transform.position.x > 3)
-            lowerHealth();
 
-        if (my_fish.transform.position.y > 10 && damageScreen.GetComponent<Image>().color.a <= 0)
+        //if (my_fish.transform.position.x > 3)
+        //  lowerHealth();
+
+        if (my_fish.transform.position.y > height  && damageScreen.GetComponent<Image>().color.a <= 0)
             tooHigh();
+
+        if (my_fish.transform.position.y > height + 20)
+            die();
+
 
         if (p.y < -75f)
         {

@@ -17,7 +17,7 @@ public class SGameMain : MonoBehaviour
     public int counter=0;
     private int currButt;
     public int rounds;
-  
+    
     public int puzzleLength;
 
     public int[] simonSaying;
