@@ -98,7 +98,7 @@ public class fishHealth : MonoBehaviour
         if (damageScreen.GetComponent<Image>().color.a > 0)
         {
             var color = damageScreen.GetComponent<Image>().color;
-            color.a -= 0.001f;
+            color.a -= 0.003f;
             damageScreen.GetComponent<Image>().color = color;
         }
 
