@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ReaganJunkPile/Scenes/SimonSaysV1.unity
     guid: 21a76f96b8ba3214f9db0f968dd1f348
+  - enabled: 1
+    path: Assets/Ben's Scenes/GameOver.unity
+    guid: c7ebd12522890474b95a0cb07ee4209f
   m_configObjects: {}
