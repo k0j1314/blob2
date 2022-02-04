@@ -19,7 +19,7 @@ public class heightChanges : MonoBehaviour
 
         if (SGameMain.SGWin == true)
         {
-            p.y = 50;
+            p.y = 60;
 
             gameObject.transform.position = p;
         }
