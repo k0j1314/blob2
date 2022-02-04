@@ -45,7 +45,9 @@ public class fishHealth : MonoBehaviour
     void lowerHealth()
     // lowers player health by 1 and displays it on the screen
     {
+
         healthRemaining -= 1;
+
         health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
 
@@ -61,7 +63,7 @@ public class fishHealth : MonoBehaviour
     {
         // Application.Quit();
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
-
+       // SceneManager.LoadScene("GameOver");
 
     }
     void OnCollisionEnter2D(Collision2D col)
