@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 433183256}
   - component: {fileID: 433183257}
   - component: {fileID: 433183259}
+  - component: {fileID: 433183258}
   m_Layer: 0
   m_Name: fish
   m_TagString: Player
@@ -657,6 +658,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3, y: 1.1}
   m_EdgeRadius: 0
+--- !u!114 &433183258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433183253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bce08e7ab53cc849aa65c9d63018a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthNumber: {fileID: 790804338}
+  my_fish: {fileID: 433183253}
+  heightIndicator: {fileID: 567348111}
+  damageScreen: {fileID: 192776426}
 --- !u!114 &433183259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +690,7 @@ MonoBehaviour:
   my_fish: {fileID: 433183253}
   heightIndicator: {fileID: 567348111}
   damageScreen: {fileID: 192776426}
+  healthRemaining: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

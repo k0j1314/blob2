@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class fishHealth : MonoBehaviour
 {
@@ -11,25 +11,25 @@ public class fishHealth : MonoBehaviour
     public GameObject my_fish;   // this object
     public GameObject heightIndicator;  // the height indicator bar
     static public int health = 3; // static as to preserve between scene transitions
-   // private SpriteRenderer mySpriteRenderer;
+                                  // private SpriteRenderer mySpriteRenderer;
     public GameObject damageScreen; // the red damage screen
-    int healthRemaining ; // an extra placeholder for the health remaining
+    int healthRemaining; // an extra placeholder for the health remaining
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
         // start the healthbar and also when switching back scenes, set the healthbar to latest update
         healthRemaining = health;
-       // healthRemaining = int.Parse(healthNumber.text);
+        // healthRemaining = int.Parse(healthNumber.text);
         health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
 
 
-       // mySpriteRenderer = GetComponent<SpriteRenderer>();
+        // mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-  
+
     void tooHigh()
     // make the screen flash red if fish is too high
     {
@@ -39,7 +39,7 @@ public class fishHealth : MonoBehaviour
 
 
     }
-    
+
 
 
     void lowerHealth()
@@ -63,7 +63,10 @@ public class fishHealth : MonoBehaviour
     {
         // Application.Quit();
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
-       // SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver");
+        health = 3;
+
+
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -72,7 +75,7 @@ public class fishHealth : MonoBehaviour
         if (col.gameObject.CompareTag("Obstacle"))
         {
             lowerHealth();
-          //  StartCoroutine("wait");
+            //  StartCoroutine("wait");
 
         }
     }
@@ -85,7 +88,7 @@ public class fishHealth : MonoBehaviour
         float height = heightIndicator.transform.position.y; // i had to do this to grab the y value of the heighindicator
 
         // if fish is too high flash the screen red
-        if (my_fish.transform.position.y > height  && damageScreen.GetComponent<Image>().color.a <= 0)
+        if (my_fish.transform.position.y > height && damageScreen.GetComponent<Image>().color.a <= 0)
             tooHigh();
 
         // if the fish ignore the hieght warning, die
