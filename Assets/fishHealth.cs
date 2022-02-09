@@ -24,7 +24,7 @@ public class fishHealth : MonoBehaviour
         // healthRemaining = int.Parse(healthNumber.text);
         health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
-
+        
 
         // mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -65,6 +65,7 @@ public class fishHealth : MonoBehaviour
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
         SceneManager.LoadScene("GameOver");
         health = 3;
+        SGameMain.SGWin = false;
 
 
 
