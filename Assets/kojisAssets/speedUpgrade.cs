@@ -27,7 +27,7 @@ public class speedUpgrade : MonoBehaviour
         if (SGameMain.SGWin==true)
         {
             fin_item.GetComponent<Image>().enabled = true;
-            TheScript.speed = 40;
+            TheScript.speed = 30;
         }
         else
         {

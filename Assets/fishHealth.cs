@@ -15,6 +15,22 @@ public class fishHealth : MonoBehaviour
     public GameObject damageScreen; // the red damage screen
     int healthRemaining; // an extra placeholder for the health remaining
 
+    public Text heightWarning;
+
+
+    [SerializeField]
+    private bool isInvincible = false;
+    [SerializeField]
+    private float invincibilityDurationSeconds;
+
+    [SerializeField]
+    private float invincibilityDeltaTime;
+
+    [SerializeField]
+    private GameObject model;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +44,44 @@ public class fishHealth : MonoBehaviour
 
         // mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        // logic goes here
+
+        isInvincible = true;
+
+        for (float i = 0; i < invincibilityDurationSeconds; i += invincibilityDeltaTime)
+        {
+
+            if (model.transform.localScale == Vector3.one)
+            {
+                ScaleModelTo(Vector3.zero);
+            }
+            else
+            {
+                ScaleModelTo(Vector3.one);
+            }
+
+
+            yield return new WaitForSeconds(invincibilityDurationSeconds);
+
+
+        }
+
+        isInvincible = false;
+
+        ScaleModelTo(Vector3.one);
+
+    }
+
+    private void ScaleModelTo(Vector3 scale)
+    {
+        model.transform.localScale = scale;
+    }
+
+
 
 
     void tooHigh()
@@ -46,10 +100,15 @@ public class fishHealth : MonoBehaviour
     // lowers player health by 1 and displays it on the screen
     {
 
+        if (isInvincible == true)
+            return;
+
         healthRemaining -= 1;
 
         health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
+
+        StartCoroutine(BecomeTemporarilyInvincible());
 
         if (healthRemaining <= 0)
         {
@@ -84,13 +143,24 @@ public class fishHealth : MonoBehaviour
 
     void Update()
     {
+
+
+
         // 
         Vector3 p = transform.position; // 
         float height = heightIndicator.transform.position.y; // i had to do this to grab the y value of the heighindicator
 
         // if fish is too high flash the screen red
         if (my_fish.transform.position.y > height && damageScreen.GetComponent<Image>().color.a <= 0)
+        {
             tooHigh();
+            heightWarning.gameObject.SetActive(true);
+        }   
+
+        if (my_fish.transform.position.y <= height)
+            heightWarning.gameObject.SetActive(false);
+
+
 
         // if the fish ignore the hieght warning, die
         if (my_fish.transform.position.y > height + 20)
