@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class beginGame : MonoBehaviour
     cameramove begin;
     public GameObject my_camera;
     public GameObject hook;
-
+    public 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,8 @@ public class beginGame : MonoBehaviour
         hook.SetActive(false); // deactivate object
 
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -25,13 +27,13 @@ public class beginGame : MonoBehaviour
         if (begin.startGame == true)
         {
             hook.SetActive(true); // activate object
-            Debug.Log("FEWFWEFWEF");
+            //Debug.Log("FEWFWEFWEF");
         }
 
         if(begin.startGame == false)
         {
             hook.SetActive(false); // deactivate object
-            Debug.Log("NONONONO");
+            //Debug.Log("NONONONO");
         }
 
 
