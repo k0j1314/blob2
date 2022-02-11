@@ -31,22 +31,22 @@ public class fishFacingDirection : MonoBehaviour
         }
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))) // up to the left
         {
-            // transform.eulerAngles = new Vector3(0, 0, -10);
+             transform.eulerAngles = new Vector3(0, 0, -10);
 
         }
         if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))) // up and right
         {
-           // transform.eulerAngles = new Vector3(0, 0, 10);
+            transform.eulerAngles = new Vector3(0, 0, 10);
         }
 
         if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))) // down left
         {
-             // transform.eulerAngles = new Vector3(0, 0, 10);
+              transform.eulerAngles = new Vector3(0, 0, 10);
 
         }
         if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))) // down right
         {
-           // transform.eulerAngles = new Vector3(0, 0, -10);
+            transform.eulerAngles = new Vector3(0, 0, -10);
 
         }
     }
