@@ -406,7 +406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -272.33}
+  m_AnchoredPosition: {x: 0, y: -390}
   m_SizeDelta: {x: 412.05, y: 108.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714818539
@@ -436,9 +436,9 @@ MonoBehaviour:
     destroy the humans who memed his cousins so relentlessly. To do this, our intrepid
     auqatic protaganist must create a contraption the likes of which have never been
     seen before. Our fishy friend has noticed some suspicious objects deep in the
-    ocean that might allow them to invent a tool to explore higher in the water.......\n\n
-    Your mission is simple: Find the compenents for the invention. Don't go higher
-    in the ocean than your technology allows.  \n"
+    ocean that might allow them to invent a tool to explore higher in the water.......\n\nYour
+    mission is simple: Find the compenents for the invention. Don't go higher in
+    the ocean than your technology allows.  \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36d82e301eaba24990680d2732ae65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: 0.8
+  scroll: 4
 --- !u!1 &1725279883
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.05170878, g: 0.10864383, b: 0.1981132, a: 0.8901961}
+  m_BackGroundColor: {r: 0.049839783, g: 0.108368754, b: 0.1981132, a: 0.8901961}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
