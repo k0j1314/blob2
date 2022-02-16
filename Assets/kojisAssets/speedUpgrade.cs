@@ -13,14 +13,34 @@ public class speedUpgrade : MonoBehaviour
     GameObject TheGameController;
 
 
+    public Text speedText;
+
+    bool textShown;
+    
     void Start()
     {
+        speedText.gameObject.SetActive(false);
+
+        textShown = false;
+
         fin_item.GetComponent<Image>().enabled = false;
 
         
         TheScript = my_fish.GetComponent<ctrl>();
 
     }
+    
+    IEnumerator showText()
+    {
+        speedText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+        speedText.gameObject.SetActive(false);
+        textShown = true;
+
+
+    }
+    
 
     void Update()
     {
@@ -28,6 +48,12 @@ public class speedUpgrade : MonoBehaviour
         {
             fin_item.GetComponent<Image>().enabled = true;
             TheScript.speed = 30;
+
+            if (textShown == false)
+                StartCoroutine(showText());
+
+
+
         }
         else
         {
