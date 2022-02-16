@@ -15,6 +15,7 @@ public class fishHealth : MonoBehaviour
     public GameObject damageScreen; // the red damage screen
     int healthRemaining; // an extra placeholder for the health remaining
 
+
     public Text heightWarning;
 
 
