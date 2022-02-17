@@ -25,7 +25,7 @@ public class heightChanges : MonoBehaviour
         }
         if (invincibilityFrame.HKwin == true)
         {
-            p.y = 100;
+            p.y = 120;
 
             gameObject.transform.position = p;
         }
