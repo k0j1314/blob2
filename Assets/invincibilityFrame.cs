@@ -41,7 +41,7 @@ public class invincibilityFrame : MonoBehaviour
     {
         //invincibilityDurationSeconds = 1.5f;
         //invincibilityDeltaTime = 0.15f;
-       // HKwin = false;
+        HKwin = false;
 
         loseMessage.SetActive(false);
         winMsg.SetActive(false);
