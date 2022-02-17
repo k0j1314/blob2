@@ -125,6 +125,11 @@ public class fishHealth : MonoBehaviour
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
         SceneManager.LoadScene("GameOver");
         health = 3;
+        speedUpgrade.game1Win = 0;
+        speedUpgrade.game3win = 0;
+
+        invincibilityFrame.HKwin = false;
+
         SGameMain.SGWin = false;
 
 
