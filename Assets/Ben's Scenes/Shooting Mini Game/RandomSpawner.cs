@@ -6,19 +6,27 @@ public class RandomSpawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public GameObject en; //enemy prefab
+    float spawnTimer = 4f;
+    float timer = 0f;
 
     void Start()
     {
-
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        timer += Time.deltaTime;
+        if(timer >= spawnTimer)
         {
-            int randSpawnPoint = Random.Range(0, spawnPoint.Length);
-
-            Instantiate(en, spawnPoint[randSpawnPoint].position, transform.rotation);
+            Spawner();
+            timer = 0f;
         }
+    }
+
+    void Spawner()
+    {
+        int randSpawnPoint = Random.Range(0, spawnPoint.Length);
+
+        Instantiate(en, spawnPoint[randSpawnPoint].position, transform.rotation);
     }
 }
