@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Ben's Scenes/Main Menu.unity
     guid: d61f883153609ed43bdc6a5e71d4e76d
   - enabled: 1
+    path: Assets/ReaganJunkPile/Scenes/IntroScene.unity
+    guid: 8d5537c4a8095e44191af8779fd6da7b
+  - enabled: 1
     path: Assets/kojisAssets/Scenes/kojiScene.unity
     guid: c3bedfa1759baf94e8681fb36b6313a5
   - enabled: 1

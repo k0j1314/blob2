@@ -17,6 +17,12 @@ public class IntroText : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * scroll * Time.deltaTime;
+        timeRemaining = timeRemaining - Time.deltaTime;
+        if (timeRemaining <0)
+        {
+            print("done");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         
     }
 }
