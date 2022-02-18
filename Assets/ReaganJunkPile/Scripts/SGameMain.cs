@@ -19,6 +19,8 @@ public class SGameMain : MonoBehaviour
 
     Color YBase = new Color(0.6f, 0.6f, 0, 1);
     Color YPress = new Color(0.8f, 0.75f, 0, 1);
+    public Text tryAgain;
+    public Text winText;
     //list of buttons   
     public GameObject SBRed; // 1
     public GameObject SBGreen; // 2
@@ -90,13 +92,38 @@ public class SGameMain : MonoBehaviour
 
     }
 
+    public void AllBright()
+    {
+        SBRed.GetComponent<Image>().color = RPress;
+        SBBlue.GetComponent<Image>().color = BPress;
+        SBGreen.GetComponent<Image>().color = GPress;
+        SBYellow.GetComponent<Image>().color = YPress;
+    }
+    public void AllGone()
+    {
+        SBRed.GetComponent<Image>().color = new Color(1,1,1,0);
+        SBBlue.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        SBGreen.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        SBYellow.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        winText.enabled = true;
+    }
+    public void BackToScene()
+    {
+        SceneManager.LoadScene("kojiScene");
+    }
+
+    public void UserWrong()
+    {
+        tryAgain.enabled = false;
+        StartCoroutine("showPattern");
+    }
+
     public void ifSame(){
         if(currButt==simonSaying[counter]){
             counter++;
             if(rounds == counter){
                 if (rounds == puzzleLength)
                 {
-                    print("you win!");
                     SimonWin();
                 }
                 else{
@@ -113,7 +140,9 @@ public class SGameMain : MonoBehaviour
           }
           counter=0;
           rounds=0;
-          StartCoroutine("showPattern");
+          tryAgain.enabled = true;
+          Invoke("UserWrong", 2.0f);
+            //StartCoroutine("showPattern");
         }
     }
 
@@ -153,13 +182,11 @@ public class SGameMain : MonoBehaviour
 
     public void SimonWin()
     {
-        Invoke("DisableButtons", 0.5f);
-        SBRed.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-        SBBlue.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-        SBGreen.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-        SBYellow.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        Invoke("DisableButtons", 0.25f);
+        Invoke("AllBright", 1.0f);
+        Invoke("AllGone", 2.5f);
         SGWin = true;
-        SceneManager.LoadScene("kojiScene");
+        Invoke("BackToScene", 3.5f);
         
 
     }
@@ -169,6 +196,8 @@ public class SGameMain : MonoBehaviour
             simonSaying[i]=Random.Range(1,5);
         }
         SGWin = false;
+        tryAgain.enabled = false;
+        winText.enabled = false;
         StartCoroutine("showPattern");
     }
 
