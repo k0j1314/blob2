@@ -30,11 +30,11 @@ public class initiateGun : MonoBehaviour
     {
 
 
-        /*
+        
 
- // if ( GUN GAME == TRUE)
-Destroy(gameObject);
- */
+       if ( ScoreKeeper.gunWin == true)
+              Destroy(gameObject);
+
 
 
     }

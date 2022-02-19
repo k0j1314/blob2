@@ -8,7 +8,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     public static int playerScore = 0;
     public Text scoreObj;
-    
+    public static bool gunWin = false;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +17,7 @@ public class ScoreKeeper : MonoBehaviour
 
         if(playerScore == 10)
         {
+            gunWin = true;
             SceneManager.LoadScene("kojiScene");
         }
     }

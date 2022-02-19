@@ -131,6 +131,8 @@ public class fishHealth : MonoBehaviour
         invincibilityFrame.HKwin = false;
 
         SGameMain.SGWin = false;
+        ScoreKeeper.gunWin = false;
+
 
 
 
