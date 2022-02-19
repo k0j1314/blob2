@@ -12,11 +12,9 @@ public class Enemy2 : MonoBehaviour
     public bool changeDirection = false;
     public GameObject deathEffect;
 
-
     void Start()
     {
         enemy = this.gameObject.GetComponent<Rigidbody2D>();
-
     }
 
     void Update()

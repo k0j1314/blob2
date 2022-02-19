@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 7145842086727721630}
+  scoreNumber: {fileID: 3938240207062739232, guid: f5f81c964e17f794e96cd10853790ead, type: 3}
