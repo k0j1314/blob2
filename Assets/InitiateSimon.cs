@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 
 
-public class InitiateGame : MonoBehaviour
+public class InitiateSimon : MonoBehaviour
 {
 
-    public string simonSays;
+    public string simonGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class InitiateGame : MonoBehaviour
     {
 
         if (col.gameObject.CompareTag("Player"))
-            SceneManager.LoadScene(simonSays);
+            SceneManager.LoadScene(simonGame);
             
 
     }
@@ -30,9 +30,16 @@ public class InitiateGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SGameMain.SGWin == true)
+       if (SGameMain.SGWin == true)
         {
             Destroy(gameObject);
         }
+
+       /*
+
+        // if ( GUN GAME == TRUE)
+       Destroy(gameObject);
+        */
+
     }
 }
