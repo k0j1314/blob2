@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class SpawnOnSuccess : MonoBehaviour
 {
 
@@ -12,7 +13,7 @@ public class SpawnOnSuccess : MonoBehaviour
     // var SpawnPoint1 : Transform;
     public GameObject spawnItem1;
     public GameObject spawnItem2;
-
+    public GameObject spawnItem3;
 
     float x1;
     float y1;
@@ -22,6 +23,9 @@ public class SpawnOnSuccess : MonoBehaviour
     float y2;
     float z2;
 
+    float x3;
+    float y3;
+    float z3;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,20 +38,33 @@ public class SpawnOnSuccess : MonoBehaviour
         y2 = spawnItem2.transform.position.y;
         z2 = spawnItem2.transform.position.z;
 
+        x3 = spawnItem3.transform.position.x;
+        y3 = spawnItem3.transform.position.y;
+        z3 = spawnItem3.transform.position.z;
+
 
         if (SGameMain.SGWin == true && invincibilityFrame.HKwin == false)
         {
             // transform.position = spawnPoint1.position;
-            transform.position = new Vector3(x1- 5, y1, z1);
+            transform.position = new Vector3(x1- 10, y1, z1);
 
 
             //  my_fish.transform.position.y = -2.4;
             // my_fish.transform.position.x = 16.4;
         }
+        /*
+         
+        do an if statement for apwnpooint2
+         
+         
+         
+         
+         
+          */
 
         if (invincibilityFrame.HKwin == true)
         {
-            transform.position = new Vector3(x2 - 5, y2, z2);
+            transform.position = new Vector3(x3 - 10, y3, z3);
 
         }
     }

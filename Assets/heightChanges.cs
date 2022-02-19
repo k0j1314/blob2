@@ -9,12 +9,7 @@ public class heightChanges : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         Vector3 p = transform.position;
 
         if (SGameMain.SGWin == true)
@@ -23,12 +18,35 @@ public class heightChanges : MonoBehaviour
 
             gameObject.transform.position = p;
         }
-        if (invincibilityFrame.HKwin == true)
+
+        /*
+         
+         if (SGameMain.SGWin == true    AND    game2 is win )
         {
-            p.y = 120;
+            p.y = 90;
 
             gameObject.transform.position = p;
         }
+
+
+
+        */
+
+
+
+        if (invincibilityFrame.HKwin == true)
+        {
+            p.y = 180;
+
+            gameObject.transform.position = p;
+        }
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
     }
 }

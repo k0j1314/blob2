@@ -185,7 +185,8 @@ public class invincibilityFrame : MonoBehaviour
         if (timerItem.timeRemaining <=0 && health> 0)
         {
             HKwin = true;
-
+            Debug.Log("weewoo");
+            isInvincible = true;
             StartCoroutine(permInvincible());
 
 
