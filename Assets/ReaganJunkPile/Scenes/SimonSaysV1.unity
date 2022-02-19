@@ -1031,7 +1031,7 @@ MonoBehaviour:
   SBYellow: {fileID: 1508553491}
   counter: 0
   rounds: 0
-  puzzleLength: 1
+  puzzleLength: 5
   simonSaying: 
 --- !u!82 &623485023
 AudioSource:
