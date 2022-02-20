@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f39fe52fdd6194b91a50c506e1759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunGame: 
+  gunGame: Shooting MiniGame
 --- !u!61 &181894948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1677,6 +1677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target1: {fileID: 1733891412}
+  target2: {fileID: 181894951}
   target3: {fileID: 1658275483}
   target4: {fileID: 78440553}
   speed: 50

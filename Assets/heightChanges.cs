@@ -12,16 +12,16 @@ public class heightChanges : MonoBehaviour
 
         Vector3 p = transform.position;
 
-        if (SGameMain.SGWin == true)
+        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == false && invincibilityFrame.HKwin == false)
         {
             p.y = 60;
 
             gameObject.transform.position = p;
         }
 
-        /*
+        
          
-         if (SGameMain.SGWin == true    AND    game2 is win )
+         if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
         {
             p.y = 90;
 
@@ -30,11 +30,11 @@ public class heightChanges : MonoBehaviour
 
 
 
-        */
+        
 
 
 
-        if (invincibilityFrame.HKwin == true)
+        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true &&  invincibilityFrame.HKwin == true)
         {
             p.y = 180;
 

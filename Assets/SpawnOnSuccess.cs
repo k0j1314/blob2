@@ -43,7 +43,7 @@ public class SpawnOnSuccess : MonoBehaviour
         z3 = spawnItem3.transform.position.z;
 
 
-        if (SGameMain.SGWin == true && invincibilityFrame.HKwin == false)
+        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == false && invincibilityFrame.HKwin == false)
         {
             // transform.position = spawnPoint1.position;
             transform.position = new Vector3(x1- 10, y1, z1);
@@ -52,15 +52,17 @@ public class SpawnOnSuccess : MonoBehaviour
             //  my_fish.transform.position.y = -2.4;
             // my_fish.transform.position.x = 16.4;
         }
-        /*
+        
          
-        do an if statement for apwnpooint2
+      //  do an if statement for apwnpooint2
          
+        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
+        {
+            transform.position = new Vector3(x2 - 10, y2, z2);
+
+        }   
          
-         
-         
-         
-          */
+          
 
         if (invincibilityFrame.HKwin == true)
         {

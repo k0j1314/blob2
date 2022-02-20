@@ -9,7 +9,7 @@ public class arrow : MonoBehaviour
 
     public Transform target1;
 
-  //  public transform target2;
+    public Transform target2;
 
     public Transform target3;
 
@@ -22,8 +22,12 @@ public class arrow : MonoBehaviour
     {
         if (SGameMain.SGWin == false)
             target = target1;
-        else if (SGameMain.SGWin == true && invincibilityFrame.HKwin == false)
+        else if (SGameMain.SGWin == true && ScoreKeeper.gunWin == false && invincibilityFrame.HKwin == false)
+            target = target2;
+
+        else if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
             target = target3;
+
         else if (invincibilityFrame.HKwin == true)
             target = target4;
 
