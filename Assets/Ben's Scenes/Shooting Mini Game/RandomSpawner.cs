@@ -6,7 +6,7 @@ public class RandomSpawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public GameObject en; //enemy prefab
-    float spawnTimer = 4f;
+    float spawnTimer = 3f;
     float timer = 0f;
 
     void Start()

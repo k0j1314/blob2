@@ -145,10 +145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   enemy: {fileID: -3975398705923313686}
-  moveSpeed: 15
+  moveSpeed: 30
   changeDirection: 0
   deathEffect: {fileID: 0}
-  healthNumber: {fileID: 5663064633241718629, guid: 22be0644c799ce54b9d44bd8cabe465c, type: 3}
 --- !u!50 &-3975398705923313686
 Rigidbody2D:
   serializedVersion: 4
