@@ -438,7 +438,8 @@ MonoBehaviour:
     seen before. Our fishy friend has noticed some suspicious objects deep in the
     ocean that might allow them to invent a tool to explore higher in the water.......\n\nYour
     mission is simple: Find the compenents for the invention. Don't go higher in
-    the ocean than your technology allows.  \n"
+    the ocean than your technology allows.  \n\nControl your fish with WASD or arrow
+    keys. The Gaming gods have given you a direction indicator to find puzzles."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
