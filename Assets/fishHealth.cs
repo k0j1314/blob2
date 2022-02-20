@@ -191,6 +191,23 @@ public class fishHealth : MonoBehaviour
             damageScreen.GetComponent<Image>().color = color;
         }
 
+
+        // win condirtrion if fish reaches the surface
+        if (my_fish.transform.position.y >= 125 && invincibilityFrame.HKwin == true)
+        {
+
+            SceneManager.LoadScene("WinScreen");
+            health = 3;
+            speedUpgrade.game1Win = 0;
+            speedUpgrade.game3win = 0;
+
+            invincibilityFrame.HKwin = false;
+
+            SGameMain.SGWin = false;
+            ScoreKeeper.gunWin = false;
+
+        }
+
     }
 
 
