@@ -126,12 +126,15 @@ public class fishHealth : MonoBehaviour
         SceneManager.LoadScene("GameOver");
         health = 3;
         speedUpgrade.game1Win = 0;
+        speedUpgrade.game2Win = 0;
         speedUpgrade.game3win = 0;
 
         invincibilityFrame.HKwin = false;
 
         SGameMain.SGWin = false;
         ScoreKeeper.gunWin = false;
+        ScoreKeeper.playerScore = 0;
+
 
 
 
@@ -194,9 +197,10 @@ public class fishHealth : MonoBehaviour
         if (my_fish.transform.position.y >= 125 && invincibilityFrame.HKwin == true)
         {
 
-            SceneManager.LoadScene("WinScreen");
+            SceneManager.LoadScene("Win Screen");
             health = 3;
             speedUpgrade.game1Win = 0;
+            speedUpgrade.game2Win = 0;
             speedUpgrade.game3win = 0;
 
             invincibilityFrame.HKwin = false;

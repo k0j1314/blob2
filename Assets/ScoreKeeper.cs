@@ -19,6 +19,7 @@ public class ScoreKeeper : MonoBehaviour
         {
             gunWin = true;
             SceneManager.LoadScene("kojiScene");
+            playerScore = 0;
         }
     }
 }
