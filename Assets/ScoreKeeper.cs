@@ -15,7 +15,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         scoreObj.text = "Score : " + playerScore.ToString();
 
-        if(playerScore == 10)
+        if(playerScore >= 10)
         {
             gunWin = true;
             SceneManager.LoadScene("kojiScene");

@@ -23,7 +23,9 @@ public class Hearts : MonoBehaviour
 
         if(heart == 0)
         {
+            
             SceneManager.LoadScene("kojiScene");
+            heart = 5;
         }
     }
 
