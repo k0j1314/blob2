@@ -34,7 +34,7 @@ public class heightChanges : MonoBehaviour
 
 
 
-        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true &&  invincibilityFrame.HKwin == true)
+        if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
             p.y = 180;
 

@@ -140,15 +140,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1266682852037734364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7249e87d9feffe049aa79dcb927fc28a, type: 3}
+  m_Script: {fileID: 11500000, guid: a6529b91108b5dd4da4a356a48ca0758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
   enemy: {fileID: -3975398705923313686}
-  moveSpeed: 15
+  moveSpeed: 20
   changeDirection: 0
   deathEffect: {fileID: 0}
-  healthNumber: {fileID: 5663064633241718629, guid: 22be0644c799ce54b9d44bd8cabe465c, type: 3}
 --- !u!50 &-3975398705923313686
 Rigidbody2D:
   serializedVersion: 4
