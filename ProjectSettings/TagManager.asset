@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Undefined
   - Enemy
+  - coin
   layers:
   - Default
   - TransparentFX

@@ -135,6 +135,10 @@ public class fishHealth : MonoBehaviour
         ScoreKeeper.gunWin = false;
         ScoreKeeper.playerScore = 0;
 
+        coinCountUI.numCoinsCollected = 0;
+
+        coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
+
 
 
 
@@ -149,6 +153,14 @@ public class fishHealth : MonoBehaviour
             //  StartCoroutine("wait");
 
         }
+       /* if (col.gameObject.CompareTag("Undefined"))
+        {
+            col.gameObject.SetActive(false);
+            Debug.Log("kdjnsvbjhkvb");
+
+        }
+       */
+        
     }
 
 
