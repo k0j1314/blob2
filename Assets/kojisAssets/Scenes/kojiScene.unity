@@ -759,7 +759,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 0.49}
+    oldSize: {x: 2.16, y: 0.49}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -781,7 +781,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 100
+  xPlus: 0
 --- !u!95 &79029768
 Animator:
   serializedVersion: 3
@@ -1323,6 +1328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &167858489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1397,7 +1404,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &167858491
@@ -2177,7 +2184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 20
+  xPlus: 0
 --- !u!95 &285201439
 Animator:
   serializedVersion: 3
@@ -2520,6 +2532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &332202377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2594,7 +2608,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &332202379
@@ -2836,6 +2850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &346828271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2910,7 +2926,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &346828273
@@ -3152,6 +3168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &348368350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3226,7 +3244,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &348368352
@@ -3506,6 +3524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCount: {fileID: 1287666504}
+  coins: 0
 --- !u!1 &470127138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,6 +3881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &501602593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3936,7 +3957,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &501602595
@@ -5186,7 +5207,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 20
+  xPlus: 0
 --- !u!95 &710307001
 Animator:
   serializedVersion: 3
@@ -5848,6 +5874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &826801217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5913,7 +5941,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2053442465
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 632a0314e51834a4593a2f43c1f88201, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5922,7 +5950,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &826801219
@@ -5933,7 +5961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826801213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.1, y: 80.5, z: 0}
+  m_LocalPosition: {x: 24.2, y: 82.4, z: 0}
   m_LocalScale: {x: 0.6883386, y: 0.6883386, z: 0.6883386}
   m_Children: []
   m_Father: {fileID: 28108499}
@@ -6055,7 +6083,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 40
+  xPlus: 0
 --- !u!1 &860526332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6173,7 +6206,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 100
+  xPlus: 0
 --- !u!61 &860526337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6191,7 +6229,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 0.49}
+    oldSize: {x: 2.16, y: 0.49}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7479,6 +7517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &1210742289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7553,7 +7593,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1210742291
@@ -7795,6 +7835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &1241403078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7869,7 +7911,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1241403080
@@ -7880,7 +7922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241403074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 174.6, y: 77, z: 0}
+  m_LocalPosition: {x: 157.5, y: 68.4, z: 0}
   m_LocalScale: {x: 0.6883386, y: 0.6883386, z: 0.6883386}
   m_Children: []
   m_Father: {fileID: 28108499}
@@ -8184,7 +8226,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 0.49}
+    oldSize: {x: 2.16, y: 0.49}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8206,7 +8248,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 100
+  xPlus: 0
 --- !u!95 &1312275773
 Animator:
   serializedVersion: 3
@@ -9140,6 +9187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!61 &1471630543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9214,7 +9263,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1471630545
@@ -9290,6 +9339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e35832882c12c4c8927a8b84fa308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  i: 0
 --- !u!212 &1476536450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9338,7 +9389,7 @@ SpriteRenderer:
   m_Size: {x: 8.6, y: 10.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1476536451
@@ -9675,7 +9726,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 40
+  xPlus: 0
 --- !u!95 &1571012203
 Animator:
   serializedVersion: 3
@@ -10493,7 +10549,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  i: 0
+  right: 1
+  x: 0
+  spriteRenderer: {fileID: 0}
   distanceLoop: 20
+  xPlus: 0
 --- !u!95 &1712359269
 Animator:
   serializedVersion: 3
