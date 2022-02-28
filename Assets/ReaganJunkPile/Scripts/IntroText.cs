@@ -11,6 +11,7 @@ public class IntroText : MonoBehaviour
     public float scroll = 0.75f;
     void Start()
     {
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
     }
     public float timeRemaining = 10;
     // Update is called once per frame
