@@ -21,10 +21,9 @@ public class Hearts : MonoBehaviour
     {
         healthNumber.text = healthRemaining.ToString();
 
-        if(heart <= 0)
+        if(heart == 0)
         {
             SceneManager.LoadScene("kojiScene");
-            heart = 5;
         }
     }
 

@@ -112,6 +112,10 @@ public class SGameMain : MonoBehaviour
         SceneManager.LoadScene("kojiScene");
     }
 
+    private void MusicOn()
+    {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
+    }
     public void UserWrong()
     {
         tryAgain.enabled = false;
@@ -141,7 +145,7 @@ public class SGameMain : MonoBehaviour
           counter=0;
           rounds=0;
           tryAgain.enabled = true;
-          Invoke("UserWrong", 2.0f);
+          Invoke("UserWrong", 2.5f);
             //StartCoroutine("showPattern");
         }
     }
@@ -153,27 +157,27 @@ public class SGameMain : MonoBehaviour
         for(int i=0; i<rounds; i++){
            if( simonSaying[i]==1){
                 SBRed.GetComponent<Image>().color= RPress;//highlight
-                yield return new WaitForSeconds(0.4f);//add f for fractions of a second (0.5f)
+                yield return new WaitForSeconds(0.6f);//add f for fractions of a second (0.5f)
                 SBRed.GetComponent<Image>().color= RBase;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
             }
          if( simonSaying[i]==2){
                 SBGreen.GetComponent<Image>().color= GPress;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
                 SBGreen.GetComponent<Image>().color= GBase;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
             }
          if( simonSaying[i]==3){
                 SBBlue.GetComponent<Image>().color= BPress;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
                 SBBlue.GetComponent<Image>().color= BBase;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
             }
          if( simonSaying[i]==4){
                 SBYellow.GetComponent<Image>().color= YPress;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
                 SBYellow.GetComponent<Image>().color= YBase;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.6f);
 
             }
         }
@@ -186,6 +190,7 @@ public class SGameMain : MonoBehaviour
         Invoke("AllBright", 1.0f);
         Invoke("AllGone", 2.5f);
         SGWin = true;
+        Invoke("MusicOn", 3.25f);
         Invoke("BackToScene", 3.5f);
         
 
@@ -198,6 +203,7 @@ public class SGameMain : MonoBehaviour
         SGWin = false;
         tryAgain.enabled = false;
         winText.enabled = false;
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
         StartCoroutine("showPattern");
     }
 

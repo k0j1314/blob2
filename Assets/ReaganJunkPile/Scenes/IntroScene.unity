@@ -406,7 +406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -464}
+  m_AnchoredPosition: {x: 0, y: -376}
   m_SizeDelta: {x: 412.05, y: 108.72}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &1714818539
@@ -429,18 +429,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Everyone knows them. The meme, the myth, the legends. Blobfish. What they
-    may not know is that these fish look normal until humans remove them from the
-    pressure of the deep sea. \n\nNow, by a freak event (undisclosed due to budget
-    issues), one blobfish has become hyperintelligent and wants only one thing: to
-    destroy the humans who memed his cousins so relentlessly. To do this, our intrepid
-    aquatic protaganist must create a contraption the likes of which have never been
-    seen before. Our fishy friend has noticed some suspicious objects deep in the
-    ocean that might allow them to invent a tool to explore higher in the water.......\n\nYour
-    mission is simple: Find the compenents for the invention. Don't go higher in
-    the ocean than your technology allows.  \n\nControls: move the blobfish using
-    either WASD or arrows. New controls will be introduced as you progress. The gaming
-    gods have blessed you with a handy indicator to find your puzzles!"
+  m_text: "By a freak event (undisclosed due to budget issues), one blobfish has
+    become hyperintelligent and wants only one thing: to destroy the humans who memed
+    his cousins so relentlessly. \n\nOur fishy friend has noticed some suspicious
+    objects deep in the ocean that might allow them to invent a tool to explore higher
+    in the water.......\n\nYour mission is simple: Find the compenents for the invention.
+    Don't go higher in the ocean than your technology allows.  \n\nControls: move
+    the blobfish using either WASD or arrows. New controls will be introduced as
+    you progress. The gaming gods have blessed you with a handy indicator to find
+    your puzzles!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -529,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36d82e301eaba24990680d2732ae65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: 1.75
+  scroll: 1.5
   timeRemaining: 22
 --- !u!1 &1725279883
 GameObject:
@@ -556,7 +553,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725279883}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &1725279885
 Camera:
   m_ObjectHideFlags: 0
