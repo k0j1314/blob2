@@ -10,7 +10,11 @@ public class cameramove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //startGame = false;
+        //startGame = false;
+        if (invincibilityFrame.HKwin == false)
+            speed = 15;
+        else speed = 5;
+
     }
 
     // Update is called once per frame

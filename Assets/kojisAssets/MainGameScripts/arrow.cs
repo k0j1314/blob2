@@ -14,7 +14,13 @@ public class arrow : MonoBehaviour
 
     public Transform target3;// points to hookGame1
 
-    public Transform target4; // point to the sky to complete the game!
+    public Transform target4; // points to simonsSays HARD MODE
+
+    public Transform target5; // points to miniGun HARD MODE
+
+    public Transform target6;// points to hookGame HARD
+
+    public Transform target7; // point to the sky to complete the game!
 
 
     public float speed = 5f;
@@ -31,7 +37,7 @@ public class arrow : MonoBehaviour
             target = target3;
         // if game3 is done, point to the sky!
         else if (invincibilityFrame.HKwin == true)
-            target = target4;
+            target = target7;
 
 
     }

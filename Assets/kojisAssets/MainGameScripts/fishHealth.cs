@@ -137,6 +137,8 @@ public class fishHealth : MonoBehaviour
         ScoreKeeper.gunWin = false;
         ScoreKeeper.playerScore = 0;
 
+        invincibilityFrame.HKHARDwin = false;
+
         coinCountUI.numCoinsCollected = 0;
 
         coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
@@ -228,6 +230,8 @@ public class fishHealth : MonoBehaviour
         SGameMain.SGWin = false;
         ScoreKeeper.gunWin = false;
         ScoreKeeper.playerScore = 0;
+
+        invincibilityFrame.HKHARDwin = false;
 
         coinCountUI.numCoinsCollected = 0;
 

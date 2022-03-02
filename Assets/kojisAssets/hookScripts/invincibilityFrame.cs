@@ -12,6 +12,8 @@ public class invincibilityFrame : MonoBehaviour
 
     public static bool HKwin = false;
 
+    public static bool HKHARDwin = false;
+
     [SerializeField]
     private bool isInvincible = false;
     [SerializeField]
@@ -91,9 +93,14 @@ public class invincibilityFrame : MonoBehaviour
     // when you beat the game,  become invincible so u dont accidently lose ransdom lives, and show some funky text wahoo
     private IEnumerator permInvincible()
     {
+        isInvincible = true;
+
+
+
         
 
-        isInvincible = true;
+
+        
 
         /* for (float i = 0; i < 300; i += invincibilityDeltaTime)
          {
@@ -186,9 +193,17 @@ public class invincibilityFrame : MonoBehaviour
         // if i have at least 1 life by the timer hits 0, i win wahoo!!!!!!!
         if (timerItem.timeRemaining <=0 && health> 0)
         {
-            HKwin = true;
+            //HKwin = true;
             Debug.Log("weewoo");
             isInvincible = true;
+
+            if (HKwin == true && HKHARDwin == false)
+                HKHARDwin = true;
+
+            if (HKwin == false)
+                HKwin = true;
+            health = 3;
+
             StartCoroutine(permInvincible());
 
 
