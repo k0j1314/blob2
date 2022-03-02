@@ -435,9 +435,7 @@ MonoBehaviour:
     objects deep in the ocean that might allow them to invent a tool to explore higher
     in the water.......\n\nYour mission is simple: Find the compenents for the invention.
     Don't go higher in the ocean than your technology allows.  \n\nControls: move
-    the blobfish using either WASD or arrows. New controls will be introduced as
-    you progress. The gaming gods have blessed you with a handy indicator to find
-    your puzzles!"
+    the blobfish using either WASD or arrows."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -527,7 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scroll: 1.5
-  timeRemaining: 22
+  timeRemaining: 10
 --- !u!1 &1725279883
 GameObject:
   m_ObjectHideFlags: 0
