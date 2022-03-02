@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
+// COUNTDOWN OF THE HOOK GAME
 public class finalCountdown : MonoBehaviour
 {
 
@@ -28,6 +28,7 @@ public class finalCountdown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // get and show health
         healthRemaining = healthNum;
         healthNumber.text = healthRemaining.ToString();
         begin = my_camera.GetComponent<cameramove>();
@@ -39,7 +40,7 @@ public class finalCountdown : MonoBehaviour
     }
 
 
-
+    // show time in seconds
     void DisplayTime(float timeToDisplay)
     {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
@@ -57,7 +58,7 @@ public class finalCountdown : MonoBehaviour
         healthNum = int.Parse(healthNumber.text);
 
 
-
+        // when the game starts, start the timer
         if (begin.startGame == true && beginTimerCheck == false)
         {
             timerIsRunning = true;
@@ -67,7 +68,7 @@ public class finalCountdown : MonoBehaviour
         }
 
 
-
+        // while the timer is running, countdown the timer
         if (timerIsRunning == true)
         {
             if (timeRemaining > 0)
@@ -76,7 +77,7 @@ public class finalCountdown : MonoBehaviour
                 DisplayTime(timeRemaining);
             }
             else
-            {
+            {// when time runs out, reset the timer
                 Debug.Log("Time has run out!");
                 //winMessage.SetActive(true);
 

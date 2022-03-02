@@ -114,7 +114,7 @@ public class SGameMain : MonoBehaviour
 
     private void MusicOn()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
+       // GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
     }
     public void UserWrong()
     {
@@ -190,7 +190,7 @@ public class SGameMain : MonoBehaviour
         Invoke("AllBright", 1.0f);
         Invoke("AllGone", 2.5f);
         SGWin = true;
-        Invoke("MusicOn", 3.25f);
+       // Invoke("MusicOn", 3.25f);
         Invoke("BackToScene", 3.5f);
         
 
@@ -203,7 +203,7 @@ public class SGameMain : MonoBehaviour
         SGWin = false;
         tryAgain.enabled = false;
         winText.enabled = false;
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
+       // GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
         StartCoroutine("showPattern");
     }
 

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class InitiateSimon : MonoBehaviour
 {
-
+    // START THE SIMONSAYS GAME ON COLLISION WITH THE ATTACHED GAMEOBJECT
     public string simonGame;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class InitiateSimon : MonoBehaviour
         
     }
 
-    
+    // ON COLLISION WITH PLAYER, LOAD THE SIMONSAYS GAME
     void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -29,7 +29,7 @@ public class InitiateSimon : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {// IF YOU BEAT SIMONSAYS, DESTROY THE ATTACHED OBJECT
        if (SGameMain.SGWin == true)
         {
             Destroy(gameObject);

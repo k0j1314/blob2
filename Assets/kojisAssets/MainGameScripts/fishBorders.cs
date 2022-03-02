@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class fishBorders : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        // max depth the fix can go is p , ummm i dont need this anymore as i figured out that i can turn gravity off on rigidbodies ahahahaha
         Vector3 p = transform.position;
 
         if (p.y < -75f)

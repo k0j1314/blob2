@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playercollision : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // explode the object 
 
     public Animator animator;
 
@@ -35,12 +35,5 @@ public class playercollision : MonoBehaviour
         //this.GetComponent<Collider>().enabled = true;
         // Destroy(gameObject);
 
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -10,18 +10,25 @@ public class coinCountUI : MonoBehaviour
     public static int numCoinsCollected = 0;  // static int ot keep track of coins
     int coins = 0;   // local just to kkep num
 
+    public Image coinImage; 
 
      
     // Start is called before the first frame update
     void Start()
     {
-
+        
         coins = numCoinsCollected;
         if ( numCoinsCollected <= 0)
-        { coinCount.gameObject.SetActive(false); 
+        { 
+            coinCount.gameObject.SetActive(false);
+            coinImage.gameObject.SetActive(false);
+            Debug.Log("lokiodjmaifvnwes");
         }
         if (numCoinsCollected > 0)
+        {
             coinCount.gameObject.SetActive(true);
+            coinImage.gameObject.SetActive(true);
+        }
 
         coinCount.text = coins.ToString() + "/10";
 
@@ -33,7 +40,7 @@ public class coinCountUI : MonoBehaviour
         {
 
             coinCount.gameObject.SetActive(true);
-
+            coinImage.gameObject.SetActive(true);
             numCoinsCollected++;
             coins = numCoinsCollected;
             coinCount.text = coins.ToString() + "/10";
@@ -46,9 +53,13 @@ public class coinCountUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (numCoinsCollected > 0)
+        /*
+        if (numCoinsCollected > 0){
             coinCount.gameObject.SetActive(true);
+        coinImage.gameObject.SetActive(true);
         Debug.Log("coincGALLOREE");
+        }
 
+        */
     }
 }

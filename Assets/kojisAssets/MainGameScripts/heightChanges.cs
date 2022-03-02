@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class heightChanges : MonoBehaviour
 {
-
+    // CHANGES THE MAX HEIGHT YOU CAN GO BASED ON GAMES WON
 
     // Start is called before the first frame update
     void Start()
     {
 
         Vector3 p = transform.position;
-
+        // if u beat game 1
         if (SGameMain.SGWin == true && ScoreKeeper.gunWin == false && invincibilityFrame.HKwin == false)
         {
             p.y = 60;
@@ -20,8 +20,8 @@ public class heightChanges : MonoBehaviour
         }
 
         
-         
-         if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
+         // if you beat game 2
+         if (/*SGameMain.SGWin == true && */ ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
         {
             p.y = 90;
 
@@ -33,7 +33,7 @@ public class heightChanges : MonoBehaviour
         
 
 
-
+         // if you beat game 3
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
             p.y = 180;
@@ -41,12 +41,6 @@ public class heightChanges : MonoBehaviour
             gameObject.transform.position = p;
         }
 
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

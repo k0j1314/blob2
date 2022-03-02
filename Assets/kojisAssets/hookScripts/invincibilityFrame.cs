@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
+// HOOK GAME HEALTH + INVINCIBILITY FRAMES
 
 public class invincibilityFrame : MonoBehaviour
 {
@@ -56,10 +57,10 @@ public class invincibilityFrame : MonoBehaviour
 
 
     }
-
+    // BECOME INVINCIBLE, FLASH N STUFF WHILE U ARE, VERY COOL , VERY POG
     private IEnumerator BecomeTemporarilyInvincible()
     {
-        // logic goes here
+        
 
         isInvincible = true;
 
@@ -87,10 +88,10 @@ public class invincibilityFrame : MonoBehaviour
 
     }
 
-
+    // when you beat the game,  become invincible so u dont accidently lose ransdom lives, and show some funky text wahoo
     private IEnumerator permInvincible()
     {
-        // logic goes here
+        
 
         isInvincible = true;
 
@@ -119,12 +120,12 @@ public class invincibilityFrame : MonoBehaviour
         ScaleModelTo(Vector3.one);
         SceneManager.LoadScene("kojiScene");
     }
-
+    // the blink effect ooooo the illusion of blinking is just scaling the pic from 1 , 0
     private void ScaleModelTo(Vector3 scale)
     {
         model.transform.localScale = scale;
     }
-
+    // if you lose the game, show a boohoo msg, get booted out
     IEnumerator loseGame()
     {
         loseMessage.SetActive(true);
@@ -136,7 +137,7 @@ public class invincibilityFrame : MonoBehaviour
 
 
     }
-
+    // lose a hea;th
     void lowerHealth()
     // lowers player health by 1 and displays it on the screen   
     {
@@ -152,7 +153,7 @@ public class invincibilityFrame : MonoBehaviour
         StartCoroutine(BecomeTemporarilyInvincible());
 
 
-
+        // if you lose the game, u lose
         if (healthRemaining <= 0)
         {
             healthRemaining = 0;
@@ -165,7 +166,7 @@ public class invincibilityFrame : MonoBehaviour
     }
 
 
-
+    
     void OnCollisionEnter2D(Collision2D col)
     {
         // if i collide with an obstacle, lose health
@@ -179,9 +180,10 @@ public class invincibilityFrame : MonoBehaviour
 
 
 
-    // Update is called once per frame
+   
     void Update()
     {
+        // if i have at least 1 life by the timer hits 0, i win wahoo!!!!!!!
         if (timerItem.timeRemaining <=0 && health> 0)
         {
             HKwin = true;

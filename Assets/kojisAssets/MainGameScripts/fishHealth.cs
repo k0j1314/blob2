@@ -46,10 +46,11 @@ public class fishHealth : MonoBehaviour
         // mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    // turn invincible for certain number of seconds, while flashing as to show it
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
-        // logic goes here
+        
 
         isInvincible = true;
 
@@ -123,6 +124,7 @@ public class fishHealth : MonoBehaviour
     {
         // Application.Quit();
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
+        // WHEN DYING, RESET ALL THE STATIC VARIABLES
         SceneManager.LoadScene("GameOver");
         health = 3;
         speedUpgrade.game1Win = 0;
@@ -138,6 +140,7 @@ public class fishHealth : MonoBehaviour
         coinCountUI.numCoinsCollected = 0;
 
         coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
+        oneUp.healthCollectedArray = new bool[] { false, false, false };
 
 
 
@@ -166,6 +169,9 @@ public class fishHealth : MonoBehaviour
 
     void Update()
     {
+        // always keep track of health
+        healthRemaining = health;
+        healthNumber.text = healthRemaining.ToString();
 
 
 
@@ -208,17 +214,27 @@ public class fishHealth : MonoBehaviour
 
         if (my_fish.transform.position.y >= 125 && invincibilityFrame.HKwin == true)
         {
-
+            // IF YOU BEAT THE GAME, RESET ALL THE STATIC VARIABLES
+            // i know i should have this as a single method, but ur stuck with this, deal with it
+            // exactly the same as the thing from  die() earlier
             SceneManager.LoadScene("Win Screen");
-            health = 3;
-            speedUpgrade.game1Win = 0;
-            speedUpgrade.game2Win = 0;
-            speedUpgrade.game3win = 0;
+        health = 3;
+        speedUpgrade.game1Win = 0;
+        speedUpgrade.game2Win = 0;
+        speedUpgrade.game3win = 0;
 
-            invincibilityFrame.HKwin = false;
+        invincibilityFrame.HKwin = false;
 
-            SGameMain.SGWin = false;
-            ScoreKeeper.gunWin = false;
+        SGameMain.SGWin = false;
+        ScoreKeeper.gunWin = false;
+        ScoreKeeper.playerScore = 0;
+
+        coinCountUI.numCoinsCollected = 0;
+
+        coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
+
+        oneUp.healthCollectedArray = new bool[] { false, false, false };
+
 
         }
 

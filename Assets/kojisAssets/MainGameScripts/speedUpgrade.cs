@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class speedUpgrade : MonoBehaviour
 {
-    
+    // CANVAS CHANGES ON MAIN MAP
+
+
     public GameObject my_fish;
     public GameObject fin_item;
     public static int game1Win = 0;
@@ -29,6 +31,8 @@ public class speedUpgrade : MonoBehaviour
 
     void Start()
     {
+        // all text is turned off at the start
+
         speedText.gameObject.SetActive(false);
         reachTheSurface.gameObject.SetActive(false);
         killedDivers.gameObject.SetActive(false);
@@ -47,6 +51,7 @@ public class speedUpgrade : MonoBehaviour
     
     IEnumerator showgame1Text()
     {
+        // show game 1 win text
         game1Win = 1;
         speedText.gameObject.SetActive(true);
 
@@ -59,6 +64,7 @@ public class speedUpgrade : MonoBehaviour
 
     IEnumerator showgame2Text()
     {
+        // show game2 win text
         game2Win = 1;
         killedDivers.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
@@ -72,6 +78,7 @@ public class speedUpgrade : MonoBehaviour
 
     IEnumerator showgame3Text()
     {
+        // show game3 win text
         game3win = 1;
         reachTheSurface.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
@@ -85,6 +92,7 @@ public class speedUpgrade : MonoBehaviour
 
     void Update()
     {
+        // if you win the first game, spped boost! and text 1
         if (SGameMain.SGWin==true)
         {
             //fin_item.GetComponent<Image>().enabled = true;
@@ -98,6 +106,7 @@ public class speedUpgrade : MonoBehaviour
         }
         else
         {
+            // 
             fin_item.GetComponent<Image>().enabled = false;
             TheScript.speed = 20;
         }
