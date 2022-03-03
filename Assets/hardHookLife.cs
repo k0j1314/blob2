@@ -5,15 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-// HOOK GAME HEALTH + INVINCIBILITY FRAMES
-
-public class invincibilityFrame : MonoBehaviour
+public class hardHookLife : MonoBehaviour
 {
-
-    public static bool HKwin = false;
-
-    public static bool HKHARDwin = false;
-
     [SerializeField]
     private bool isInvincible = false;
     [SerializeField]
@@ -38,13 +31,11 @@ public class invincibilityFrame : MonoBehaviour
     public GameObject itemWithTimerCode;
     finalCountdown timerItem;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        //invincibilityDurationSeconds = 1.5f;
-        //invincibilityDeltaTime = 0.15f;
-        HKwin = false;
+        invincibilityFrame.HKwin = true;
+        //health = 3;
 
         loseMessage.SetActive(false);
         winMsg.SetActive(false);
@@ -58,11 +49,12 @@ public class invincibilityFrame : MonoBehaviour
         timerItem = itemWithTimerCode.GetComponent<finalCountdown>();
 
 
+
     }
     // BECOME INVINCIBLE, FLASH N STUFF WHILE U ARE, VERY COOL , VERY POG
     private IEnumerator BecomeTemporarilyInvincible()
     {
-        
+
 
         isInvincible = true;
 
@@ -97,10 +89,10 @@ public class invincibilityFrame : MonoBehaviour
 
 
 
-        
 
 
-        
+
+
 
         /* for (float i = 0; i < 300; i += invincibilityDeltaTime)
          {
@@ -173,7 +165,7 @@ public class invincibilityFrame : MonoBehaviour
     }
 
 
-    
+
     void OnCollisionEnter2D(Collision2D col)
     {
         // if i collide with an obstacle, lose health
@@ -187,27 +179,28 @@ public class invincibilityFrame : MonoBehaviour
 
 
 
-   
+
     void Update()
     {
         // if i have at least 1 life by the timer hits 0, i win wahoo!!!!!!!
-        if (timerItem.timeRemaining <=0 && health> 0)
+       
+        if (timerItem.timeRemaining <= 0 && health > 0)
         {
             //HKwin = true;
             Debug.Log("weewoo");
             isInvincible = true;
 
-            if (HKwin == true && HKHARDwin == false)
-                HKHARDwin = true;
+            if (invincibilityFrame.HKwin == true && invincibilityFrame.HKHARDwin == false)
+                invincibilityFrame.HKHARDwin = true;
 
-            if (HKwin == false)
-                HKwin = true;
+            if (invincibilityFrame.HKwin == false)
+                invincibilityFrame.HKwin = true;
             health = 3;
 
             StartCoroutine(permInvincible());
-
+          
 
         }
-
+      
     }
 }
