@@ -42,7 +42,7 @@ public class upNdown : MonoBehaviour
             if (invincibilityFrame.HKwin == false)
                 speed = Random.Range(3, 10);
             else
-                speed = Random.Range(8, 15);
+                speed = Random.Range(20, 80);
         }
         else
         {
@@ -50,7 +50,7 @@ public class upNdown : MonoBehaviour
             if (invincibilityFrame.HKwin == false)
                 speed = Random.Range(3, 10);
             else
-                speed = Random.Range(8, 15);
+                speed = Random.Range(3, 20);
         }
 
         if (invincibilityFrame.HKwin == false)
@@ -61,7 +61,7 @@ public class upNdown : MonoBehaviour
         }
         else
         {
-            if (transform.position.y >= 10 && transform.position.y <= 13 && goingUp == false)
+            if (transform.position.y >= 10 && /*transform.position.y <= 13 &&*/ goingUp == false)
                 warning.SetActive(true);
             else warning.SetActive(false);
         }

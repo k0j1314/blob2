@@ -4069,8 +4069,8 @@ GameObject:
   - component: {fileID: 2023410540}
   - component: {fileID: 2023410539}
   - component: {fileID: 2023410542}
-  - component: {fileID: 2023410541}
   - component: {fileID: 2023410543}
+  - component: {fileID: 2023410541}
   m_Layer: 0
   m_Name: fish
   m_TagString: Untagged
@@ -4115,7 +4115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023410538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24e86a0ee1f2c08408c8271723101717, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f0f70c1d7f2267408a98daa75c19bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isInvincible: 0
