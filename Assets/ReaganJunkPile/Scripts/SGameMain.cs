@@ -21,6 +21,7 @@ public class SGameMain : MonoBehaviour
     Color YPress = new Color(0.8f, 0.75f, 0, 1);
     public Text tryAgain;
     public Text winText;
+    public Text instructions;
     //list of buttons   
     public GameObject SBRed; // 1
     public GameObject SBGreen; // 2
@@ -114,7 +115,7 @@ public class SGameMain : MonoBehaviour
 
     private void MusicOn()
     {
-       // GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
+       GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
     }
     public void UserWrong()
     {
@@ -190,7 +191,7 @@ public class SGameMain : MonoBehaviour
         Invoke("AllBright", 1.0f);
         Invoke("AllGone", 2.5f);
         SGWin = true;
-       // Invoke("MusicOn", 3.25f);
+        Invoke("MusicOn", 3.25f);
         Invoke("BackToScene", 3.5f);
         
 
@@ -203,7 +204,11 @@ public class SGameMain : MonoBehaviour
         SGWin = false;
         tryAgain.enabled = false;
         winText.enabled = false;
-       // GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
+        DisableButtons();
+        instructions.enabled = true;
+        Invoke("EnableButtons", 3.5f);
+        instructions.enabled = false;
         StartCoroutine("showPattern");
     }
 
