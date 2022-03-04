@@ -12,7 +12,7 @@ public class cameramove : MonoBehaviour
     {
         //startGame = false;
         if (invincibilityFrame.HKwin == false)
-            speed = 15;
+            speed = 20;
         else speed = 5;
 
     }
