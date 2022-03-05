@@ -36,7 +36,7 @@ public class heightChanges : MonoBehaviour
          // if you beat game 3
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
-            p.y = 180;
+            p.y = 400; //338 is the highest limit
 
             gameObject.transform.position = p;
         }
