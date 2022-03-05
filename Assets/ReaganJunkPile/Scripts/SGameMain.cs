@@ -8,20 +8,25 @@ public class SGameMain : MonoBehaviour
     //add a button disable while simonsaying?
     public static bool SGWin;
 
-    Color RBase = new Color(0.6f, 0.1f, 0.05f, 1);
-    Color RPress = new Color(1,.078f,.078f,1);
+    Color RBase = new Color(0.5f, 0, 0, 1);
+    Color RPress = new Color(1, 0, 0, 1);
 
-    Color GBase = new Color(0, .4f, 0.1f, 1);
-    Color GPress = new Color(0, .75f, 0.2f, 1);
+    Color GBase = new Color(0, .45f, 0.1f, 1);
+    Color GPress = new Color(0, .9f, 0.2f, 1);
 
-    Color BBase = new Color(0, 0.1f, 0.4f, 1);
-    Color BPress = new Color(0, 0.2f, 0.8f, 1);
+    Color BBase = new Color(0, 0, 0.5f, 1);
+    Color BPress = new Color(0, 0, 1, 1);
 
-    Color YBase = new Color(0.6f, 0.6f, 0, 1);
-    Color YPress = new Color(0.8f, 0.75f, 0, 1);
+    Color YBase = new Color(0.5f, 0.5f, 0, 1);
+    Color YPress = new Color(0.9f, 0.9f, 0, 1);
     public Text tryAgain;
     public Text winText;
-    public Text instructions;
+
+    public AudioSource RedAudio;
+    public AudioSource GreenAudio;
+    public AudioSource BlueAudio;
+    public AudioSource YellowAudio;
+
     //list of buttons   
     public GameObject SBRed; // 1
     public GameObject SBGreen; // 2
@@ -39,6 +44,7 @@ public class SGameMain : MonoBehaviour
     public void RedB(){
         currButt=1;
         SBRed.GetComponent<Image>().color= RPress;//highlight
+        RedAudio.Play();
         Invoke("RedClick", 0.3f);
         ifSame();
     }
@@ -49,7 +55,8 @@ public class SGameMain : MonoBehaviour
 
      public void GreenB(){
          currButt=2;
-         SBGreen.GetComponent<Image>().color= GPress; //26,202,64,1)
+         SBGreen.GetComponent<Image>().color= GPress; //26,202,64,1
+         GreenAudio.Play();
          Invoke("GreenClick",0.3f);
          ifSame();
     }
@@ -59,6 +66,7 @@ public class SGameMain : MonoBehaviour
      public void BlueB(){
          currButt=3;
          SBBlue.GetComponent<Image>().color=BPress;
+         BlueAudio.Play();
          Invoke("BlueClick",0.3f);
          ifSame();
     }
@@ -68,6 +76,7 @@ public class SGameMain : MonoBehaviour
      public void YellowB(){
          currButt=4;
          SBYellow.GetComponent<Image>().color= YPress;
+         YellowAudio.Play();
          Invoke("YellowClick",0.3f);
          ifSame();
     }
@@ -115,7 +124,7 @@ public class SGameMain : MonoBehaviour
 
     private void MusicOn()
     {
-       GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
+       //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().PlayMusic();
     }
     public void UserWrong()
     {
@@ -158,27 +167,31 @@ public class SGameMain : MonoBehaviour
         for(int i=0; i<rounds; i++){
            if( simonSaying[i]==1){
                 SBRed.GetComponent<Image>().color= RPress;//highlight
-                yield return new WaitForSeconds(0.6f);//add f for fractions of a second (0.5f)
+                RedAudio.Play();
+                yield return new WaitForSeconds(0.5f);//add f for fractions of a second (0.5f)
                 SBRed.GetComponent<Image>().color= RBase;
-                yield return new WaitForSeconds(0.6f);
+                yield return new WaitForSeconds(0.5f);
             }
          if( simonSaying[i]==2){
                 SBGreen.GetComponent<Image>().color= GPress;
-                yield return new WaitForSeconds(0.6f);
+                GreenAudio.Play();
+                yield return new WaitForSeconds(0.5f);
                 SBGreen.GetComponent<Image>().color= GBase;
-                yield return new WaitForSeconds(0.6f);
+                yield return new WaitForSeconds(0.5f);
             }
          if( simonSaying[i]==3){
                 SBBlue.GetComponent<Image>().color= BPress;
-                yield return new WaitForSeconds(0.6f);
+                BlueAudio.Play();
+                yield return new WaitForSeconds(0.5f);
                 SBBlue.GetComponent<Image>().color= BBase;
-                yield return new WaitForSeconds(0.6f);
+                yield return new WaitForSeconds(0.5f);
             }
          if( simonSaying[i]==4){
                 SBYellow.GetComponent<Image>().color= YPress;
-                yield return new WaitForSeconds(0.6f);
+                YellowAudio.Play();
+                yield return new WaitForSeconds(0.5f);
                 SBYellow.GetComponent<Image>().color= YBase;
-                yield return new WaitForSeconds(0.6f);
+                yield return new WaitForSeconds(0.5f);
 
             }
         }
@@ -204,11 +217,8 @@ public class SGameMain : MonoBehaviour
         SGWin = false;
         tryAgain.enabled = false;
         winText.enabled = false;
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
         DisableButtons();
-        instructions.enabled = true;
-        Invoke("EnableButtons", 3.5f);
-        instructions.enabled = false;
         StartCoroutine("showPattern");
     }
 
