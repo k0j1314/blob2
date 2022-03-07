@@ -11,32 +11,37 @@ public class heightChanges : MonoBehaviour
     {
 
         Vector3 p = transform.position;
-        // if u beat game 1
-        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == false && invincibilityFrame.HKwin == false)
+        // if u start
+        if (SGameMain.SGWin == false/* && ScoreKeeper.gunWin == false/* && invincibilityFrame.HKwin == false*/)
         {
-            p.y = 60;
+            p.y = 20;
 
             gameObject.transform.position = p;
         }
 
         
-         // if you beat game 2
-         if (/*SGameMain.SGWin == true && */ ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
+         // if you beat game 1
+         if (SGameMain.SGWin == true &&  ScoreKeeper.gunWin == false &&  invincibilityFrame.HKwin == false)
         {
-            p.y = 90;
+            p.y = 80;
+
+            gameObject.transform.position = p;
+        }
+
+         // if u beat game 2
+        if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
+        {
+            p.y = 140;
 
             gameObject.transform.position = p;
         }
 
 
-
-        
-
-
-         // if you beat game 3
+        //
+        // if you beat game 3
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
-            p.y = 400; //338 is the highest limit
+            p.y = 400; //338 is the highest limit , -45 is the lowest limit
 
             gameObject.transform.position = p;
         }
@@ -44,3 +49,17 @@ public class heightChanges : MonoBehaviour
 
     }
 }
+/*SURFACEEEE  340
+ * 
+ * -----------270
+ * 
+ * -------------220
+ * 
+ * ----------140
+ * 
+ * -----------  80
+ * 
+ * ----------- 20
+ * 
+ * -------------  -45
+ * */
