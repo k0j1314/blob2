@@ -42,7 +42,7 @@ public class upNdown : MonoBehaviour
             if (invincibilityFrame.HKwin == false)
                 speed = Random.Range(3, 10);
             else
-                speed = Random.Range(20, 80);
+                speed = Random.Range(10, 20);
         }
         else
         {
@@ -50,7 +50,7 @@ public class upNdown : MonoBehaviour
             if (invincibilityFrame.HKwin == false)
                 speed = Random.Range(3, 10);
             else
-                speed = Random.Range(3, 20);
+                speed = Random.Range(10, 20);
         }
 
         if (invincibilityFrame.HKwin == false)
