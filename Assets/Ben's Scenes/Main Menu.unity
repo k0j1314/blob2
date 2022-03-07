@@ -203,7 +203,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 308717fa21578334093cd4e8da127362, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -714,6 +714,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 9068830692607751320, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 308717fa21578334093cd4e8da127362, type: 2}
     - target: {fileID: 9068830692607751323, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_SizeDelta.x
       value: 197.81
