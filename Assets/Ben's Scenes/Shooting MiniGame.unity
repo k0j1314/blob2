@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 2029736506}
     - target: {fileID: 1266682852037734352, guid: 394329631de311d4083b73bd8748ba89, type: 3}
       propertyPath: moveSpeed
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1266682852037734352, guid: 394329631de311d4083b73bd8748ba89, type: 3}
       propertyPath: healthNumber
@@ -325,6 +325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1266682852037734367, guid: 394329631de311d4083b73bd8748ba89, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 282d717a7bdf78c4b8806d9f6a15dfa7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394329631de311d4083b73bd8748ba89, type: 3}
 --- !u!1 &376536284
