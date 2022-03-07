@@ -4,23 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ScoreKeeper : MonoBehaviour
+
+public class ScoreKeeper2 : MonoBehaviour
 {
-    public static int playerScore = 0;
+    
     public Text scoreObj;
     public static bool gunWin = false;
 
     // Update is called once per frame
     void Update()
     {
-        scoreObj.text = "Score : " + playerScore.ToString();
-        Debug.Log(playerScore);
+        //Debug.Log(playerScore);
 
-        if(playerScore >= 10)
+        scoreObj.text = "Score : " + ScoreKeeper.playerScore.ToString();
+
+        if (ScoreKeeper.playerScore >= 10)
         {
             gunWin = true;
             SceneManager.LoadScene("kojiScene");
-            playerScore = 0;
+            ScoreKeeper.playerScore = 0;
         }
     }
 }

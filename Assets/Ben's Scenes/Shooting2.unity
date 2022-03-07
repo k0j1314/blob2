@@ -422,7 +422,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 319c14f5a90d96240902a5e076c71246, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -657,6 +657,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthNumber: {fileID: 1914798276}
 --- !u!114 &641190028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641190026}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad940087b81891459bd5fedcba3d754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreObj: {fileID: 803968925}
+--- !u!114 &641190034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1888,6 +1901,14 @@ PrefabInstance:
     - target: {fileID: 5943815055167528158, guid: 03ae4ae1158216e41bc62b26da102c0d, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943815055167528159, guid: 03ae4ae1158216e41bc62b26da102c0d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943815055167528159, guid: 03ae4ae1158216e41bc62b26da102c0d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2053442465
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ae4ae1158216e41bc62b26da102c0d, type: 3}

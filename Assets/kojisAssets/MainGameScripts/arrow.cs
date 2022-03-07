@@ -36,9 +36,14 @@ public class arrow : MonoBehaviour
         else if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
             target = target3;
         // if game3 is done, point to the sky!
-        else if (invincibilityFrame.HKwin == true)
-            target = target7;
-
+        else if (invincibilityFrame.HKwin == true && SGameMain2.SGWin2 == false)
+            target = target4;
+        else if (SGameMain2.SGWin2 == true && ScoreKeeper2.gunWin == false)
+            target = target5;
+        else if (ScoreKeeper2.gunWin == true && invincibilityFrame.HKHARDwin == false)
+            target = target6;
+        else target = target7; 
+       
 
     }
 

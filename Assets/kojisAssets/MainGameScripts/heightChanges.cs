@@ -41,6 +41,14 @@ public class heightChanges : MonoBehaviour
         // if you beat game 3
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
+            p.y = 220; //338 is the highest limit , -45 is the lowest limit
+
+            gameObject.transform.position = p;
+        }
+
+        // beat game 4
+        if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true &&  invincibilityFrame.HKwin == true && */ SGameMain2.SGWin2 == true)
+        {
             p.y = 400; //338 is the highest limit , -45 is the lowest limit
 
             gameObject.transform.position = p;
