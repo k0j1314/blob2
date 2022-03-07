@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   enemy: {fileID: -3975398705923313686}
-  moveSpeed: 30
+  moveSpeed: 35
   changeDirection: 0
   deathEffect: {fileID: 0}
 --- !u!50 &-3975398705923313686
