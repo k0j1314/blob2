@@ -406,7 +406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -232}
+  m_AnchoredPosition: {x: 0, y: -225}
   m_SizeDelta: {x: 412.05, y: 108.72}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &1714818539
@@ -431,11 +431,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "By a freak event (undisclosed due to budget issues), one blobfish has
     become hyperintelligent and wants only one thing: to destroy the humans who memed
-    his cousins so relentlessly. \n\nOur fishy friend has noticed some suspicious
-    objects deep in the ocean that might allow them to invent a tool to explore higher
-    in the water.......\n\nYour mission is simple: Find the compenents for the invention.
-    Don't go higher in the ocean than your technology allows.  \n\nControls: move
-    the blobfish using either WASD or arrows."
+    his cousins so reflentlessly. \n\nYour mission is simple: Solve puzzles to gain
+    the power to travel higher in the ocean\n\nControls: move the blobfish using
+    either WASD or arrows."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -525,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scroll: 1
-  timeRemaining: 17
+  timeRemaining: 15
 --- !u!1 &1725279883
 GameObject:
   m_ObjectHideFlags: 0
