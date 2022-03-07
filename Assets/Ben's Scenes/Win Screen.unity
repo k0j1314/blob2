@@ -517,7 +517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 820756188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65852b813e06994eb4ae881702f2672, type: 3}
+  m_Script: {fileID: 11500000, guid: e3ee379c767a3c94f856271251cd9f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1046589899
@@ -595,7 +595,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 308717fa21578334093cd4e8da127362, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -739,7 +739,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 820756191}
         m_TargetAssemblyTypeName: Winscreen, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
