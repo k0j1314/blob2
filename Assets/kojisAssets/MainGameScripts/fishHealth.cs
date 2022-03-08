@@ -221,7 +221,7 @@ public class fishHealth : MonoBehaviour
             damageScreen.GetComponent<Image>().color = color;
         }
 
-        if (my_fish.transform.position.y >= 338 && invincibilityFrame.HKwin == true)
+        if (my_fish.transform.position.y >= 345 && invincibilityFrame.HKwin == true)
         {
             // IF YOU BEAT THE GAME, RESET ALL THE STATIC VARIABLES
             // i know i should have this as a single method, but ur stuck with this, deal with it
@@ -256,7 +256,7 @@ public class fishHealth : MonoBehaviour
         }
 
 
-        if (my_fish.transform.position.y >= 337 && coinCountUI.numCoinsCollected >=10)
+        if (my_fish.transform.position.y >= 344 && coinCountUI.numCoinsCollected >=10)
         {
             SceneManager.LoadScene("Win Screen2");
 
