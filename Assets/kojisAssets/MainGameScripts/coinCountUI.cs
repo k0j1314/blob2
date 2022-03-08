@@ -22,7 +22,7 @@ public class coinCountUI : MonoBehaviour
         { 
             coinCount.gameObject.SetActive(false);
             coinImage.gameObject.SetActive(false);
-            Debug.Log("lokiodjmaifvnwes");
+           // Debug.Log("lokiodjmaifvnwes");
         }
         if (numCoinsCollected > 0)
         {

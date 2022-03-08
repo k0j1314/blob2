@@ -13,6 +13,7 @@ public class speedUpgrade : MonoBehaviour
     public static int game1Win = 0;
     public static int game2Win = 0;
     public static int game3win = 0;
+    public static int game6win = 0;
     public static int game4win = 0;
 
     ctrl TheScript;
@@ -21,17 +22,21 @@ public class speedUpgrade : MonoBehaviour
 
     public Text speedText;// text after beating game 1
 
-    public Text reachTheSurface; // text after beating game 3
+    public Text reachTheSurface; // text after beating game 6
 
     public Text killedDivers;  // text after game 2
+
+    public Text avoidedHooks;
 
     public Text bigBrain; // text after beating game 4
 
     bool textShown;
 
-    bool text3shown;
+    bool text6shown;
 
     bool text2shown;
+
+    bool text3shown;
 
     bool text4shown;
 
@@ -50,6 +55,7 @@ public class speedUpgrade : MonoBehaviour
         textShown = false;
         text2shown = false;
         text3shown = false;
+        text6shown = false;
         text4shown = false;
 
 
@@ -85,17 +91,29 @@ public class speedUpgrade : MonoBehaviour
 
     }
 
-
-
     IEnumerator showgame3Text()
     {
         // show game3 win text
         game3win = 1;
+        avoidedHooks.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        avoidedHooks.gameObject.SetActive(false);
+
+        text3shown = true;
+
+    }
+
+
+
+    IEnumerator showgame6Text()
+    {
+        // show game6 win text
+        game6win = 1;
         reachTheSurface.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
         reachTheSurface.gameObject.SetActive(false);
 
-        text3shown = true;
+        text6shown = true;
 
     }
 
@@ -139,16 +157,20 @@ public class speedUpgrade : MonoBehaviour
             TheScript.speed = 20;
         }
 
-        if (invincibilityFrame.HKHARDwin == true && game3win == 0 && text3shown == false)
+        if (invincibilityFrame.HKHARDwin == true && game6win == 0 && text6shown == false)
         {
 
-            StartCoroutine(showgame3Text());
+            StartCoroutine(showgame6Text());
         }
 
         if (ScoreKeeper.gunWin == true && game2Win == 0 && text2shown == false)
         {
 
             StartCoroutine(showgame2Text());
+        }
+        if( invincibilityFrame.HKwin == true && game3win == 0 && text3shown == false)
+        {
+            StartCoroutine(showgame3Text());
         }
 
         if (SGameMain2.SGWin2 == true && game4win == 0 && text4shown == false)

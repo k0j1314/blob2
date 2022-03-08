@@ -29,7 +29,7 @@ public class initiateminiGunHARD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {// IF YOU WON THE game, DESTROY THE ATTACHED GAMEOBJECT
-        if (invincibilityFrame.HKwin == true)
+        if (ScoreKeeper2.gunWin == true)
         {
             Destroy(gameObject);
         }

@@ -96,7 +96,31 @@ public class fishHealth : MonoBehaviour
 
     }
 
+    void resetValues()
+        // resets all the static values so that u can play the game again!
+    {
+        health = 3;
+        speedUpgrade.game1Win = 0;
+        speedUpgrade.game2Win = 0;
+        speedUpgrade.game3win = 0;
+        speedUpgrade.game6win = 0;
 
+        invincibilityFrame.HKwin = false;
+
+        SGameMain.SGWin = false;
+        ScoreKeeper.gunWin = false;
+        ScoreKeeper.playerScore = 0;
+
+        invincibilityFrame.HKHARDwin = false;
+        SGameMain2.SGWin2 = false;
+
+
+        coinCountUI.numCoinsCollected = 0;
+
+        coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false };
+        oneUp.healthCollectedArray = new bool[] { false, false, false };
+
+    }
 
     void lowerHealth()
     // lowers player health by 1 and displays it on the screen
@@ -126,29 +150,8 @@ public class fishHealth : MonoBehaviour
         // UnityEditor.EditorApplication.isPlaying = false;  // for testing purposes
         // WHEN DYING, RESET ALL THE STATIC VARIABLES
         SceneManager.LoadScene("GameOver");
-        health = 3;
-        speedUpgrade.game1Win = 0;
-        speedUpgrade.game2Win = 0;
-        speedUpgrade.game3win = 0;
 
-        invincibilityFrame.HKwin = false;
-
-        SGameMain.SGWin = false;
-        ScoreKeeper.gunWin = false;
-        ScoreKeeper.playerScore = 0;
-
-        invincibilityFrame.HKHARDwin = false;
-        SGameMain2.SGWin2 = false;
-
-
-        coinCountUI.numCoinsCollected = 0;
-
-        coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
-        oneUp.healthCollectedArray = new bool[] { false, false, false };
-
-
-
-
+        resetValues();
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -222,29 +225,42 @@ public class fishHealth : MonoBehaviour
             // i know i should have this as a single method, but ur stuck with this, deal with it
             // exactly the same as the thing from  die() earlier
             SceneManager.LoadScene("Win Screen");
-        health = 3;
-        speedUpgrade.game1Win = 0;
-        speedUpgrade.game2Win = 0;
-        speedUpgrade.game3win = 0;
 
-        invincibilityFrame.HKwin = false;
+            resetValues();
+            /*
+             * health = 3;
+            speedUpgrade.game1Win = 0;
+            speedUpgrade.game2Win = 0;
+            speedUpgrade.game3win = 0;
 
-        SGameMain.SGWin = false;
-        ScoreKeeper.gunWin = false;
-        ScoreKeeper.playerScore = 0;
+            invincibilityFrame.HKwin = false;
 
-        invincibilityFrame.HKHARDwin = false;
+            SGameMain.SGWin = false;
+            ScoreKeeper.gunWin = false;
+            ScoreKeeper.playerScore = 0;
 
-        SGameMain2.SGWin2 = false;
+            invincibilityFrame.HKHARDwin = false;
 
-        coinCountUI.numCoinsCollected = 0;
+            SGameMain2.SGWin2 = false;
 
-        coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
+            coinCountUI.numCoinsCollected = 0;
 
-        oneUp.healthCollectedArray = new bool[] { false, false, false };
+            coinCollected.collectedArray = new bool[] { false, false, false, false, false, false, false, false, false, false} ;
+
+            oneUp.healthCollectedArray = new bool[] { false, false, false };
+            */
 
 
         }
+
+
+        if (my_fish.transform.position.y >= 337 && invincibilityFrame.HKHARDwin == true)
+        {
+            SceneManager.LoadScene("Win Screen2");
+
+            resetValues();
+        }
+
 
 
 
