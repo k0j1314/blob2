@@ -138,6 +138,8 @@ public class fishHealth : MonoBehaviour
         ScoreKeeper.playerScore = 0;
 
         invincibilityFrame.HKHARDwin = false;
+        SGameMain2.SGWin2 = false;
+
 
         coinCountUI.numCoinsCollected = 0;
 
@@ -232,6 +234,8 @@ public class fishHealth : MonoBehaviour
         ScoreKeeper.playerScore = 0;
 
         invincibilityFrame.HKHARDwin = false;
+
+        SGameMain2.SGWin2 = false;
 
         coinCountUI.numCoinsCollected = 0;
 

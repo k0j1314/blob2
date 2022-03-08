@@ -29,7 +29,7 @@ public class initiateSimonSaysHARD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {// IF YOU WON THE game, DESTROY THE ATTACHED GAMEOBJECT
-        if (invincibilityFrame.HKwin == true)
+        if (SGameMain2.SGWin2 == true)
         {
             Destroy(gameObject);
         }

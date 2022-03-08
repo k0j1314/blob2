@@ -13,6 +13,8 @@ public class speedUpgrade : MonoBehaviour
     public static int game1Win = 0;
     public static int game2Win = 0;
     public static int game3win = 0;
+    public static int game4win = 0;
+
     ctrl TheScript;
     GameObject TheGameController;
 
@@ -23,11 +25,16 @@ public class speedUpgrade : MonoBehaviour
 
     public Text killedDivers;  // text after game 2
 
+    public Text bigBrain; // text after beating game 4
+
     bool textShown;
 
     bool text3shown;
 
     bool text2shown;
+
+    bool text4shown;
+
 
     void Start()
     {
@@ -36,11 +43,15 @@ public class speedUpgrade : MonoBehaviour
         speedText.gameObject.SetActive(false);
         reachTheSurface.gameObject.SetActive(false);
         killedDivers.gameObject.SetActive(false);
+        bigBrain.gameObject.SetActive(false);
+
 
 
         textShown = false;
         text2shown = false;
         text3shown = false;
+        text4shown = false;
+
 
         fin_item.GetComponent<Image>().enabled = false;
 
@@ -88,20 +99,37 @@ public class speedUpgrade : MonoBehaviour
 
     }
 
-    
+    IEnumerator showgame4Text()
+    {
+        // show game 1 win text
+        game4win = 1;
+        bigBrain.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+        bigBrain.gameObject.SetActive(false);
+        text4shown = true;
+
+
+    }
 
     void Update()
     {
         // if you win the first game, spped boost! and text 1
-        if (SGameMain.SGWin==true)
+        if (SGameMain.SGWin==true && invincibilityFrame.HKwin == false)
         {
             //fin_item.GetComponent<Image>().enabled = true;
-            TheScript.speed = 30;
+            TheScript.speed = 25;
 
             if (textShown == false && game1Win == 0)
                 StartCoroutine(showgame1Text());
 
+        
 
+
+        }
+        if (invincibilityFrame.HKwin == true)
+        {
+            TheScript.speed = 30;
 
         }
         else
@@ -111,7 +139,7 @@ public class speedUpgrade : MonoBehaviour
             TheScript.speed = 20;
         }
 
-        if (invincibilityFrame.HKwin == true && game3win == 0 && text3shown == false)
+        if (invincibilityFrame.HKHARDwin == true && game3win == 0 && text3shown == false)
         {
 
             StartCoroutine(showgame3Text());
@@ -121,6 +149,11 @@ public class speedUpgrade : MonoBehaviour
         {
 
             StartCoroutine(showgame2Text());
+        }
+
+        if (SGameMain2.SGWin2 == true && game4win == 0 && text4shown == false)
+        {
+            StartCoroutine(showgame4Text());
         }
     }
 
