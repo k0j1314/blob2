@@ -209,6 +209,18 @@ public class SGameMain : MonoBehaviour
         
 
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            RedB();
+        if (Input.GetKeyDown(KeyCode.W))
+            GreenB();
+        if (Input.GetKeyDown(KeyCode.S))
+            YellowB();
+        if (Input.GetKeyDown(KeyCode.D))
+            BlueB();
+    }
+
     void Start(){
         simonSaying= new int[puzzleLength];
         for(int i=0; i<puzzleLength; i++){
