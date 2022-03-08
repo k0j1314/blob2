@@ -239,7 +239,7 @@ public class SGameMain2 : MonoBehaviour
         SGWin2 = false;
         tryAgain.enabled = false;
         winText.enabled = false;
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicLooper>().StopMusic();
         DisableButtons();
         StartCoroutine("showPattern");
     }
