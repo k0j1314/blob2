@@ -14,7 +14,7 @@ public class ScoreKeeper : MonoBehaviour
     void Update()
     {
         scoreObj.text = "Score : " + playerScore.ToString();
-        Debug.Log(playerScore);
+        //Debug.Log(playerScore);
 
         if(playerScore >= 10)
         {
