@@ -17,6 +17,8 @@ public class speedUpgrade : MonoBehaviour
     public static int game4win = 0;
     public static int game5win = 0;
 
+    public static int difPass = 0;
+
     ctrl TheScript;
     GameObject TheGameController;
 
@@ -33,6 +35,8 @@ public class speedUpgrade : MonoBehaviour
 
     public Text diver2; // text after beating game 5
 
+    public Text difficulty;  // text to show more difficulty levels
+
     bool textShown;
 
     bool text6shown;
@@ -45,6 +49,8 @@ public class speedUpgrade : MonoBehaviour
 
     bool text5shown;
 
+    bool textDshown;
+
 
     void Start()
     {
@@ -56,7 +62,7 @@ public class speedUpgrade : MonoBehaviour
         bigBrain.gameObject.SetActive(false);
         avoidedHooks.gameObject.SetActive(false);
         diver2.gameObject.SetActive(false);
-
+        difficulty.gameObject.SetActive(false);
 
 
         textShown = false;
@@ -65,7 +71,7 @@ public class speedUpgrade : MonoBehaviour
         text6shown = false;
         text4shown = false;
         text5shown = false;
-
+        textDshown = false;
 
 
         fin_item.GetComponent<Image>().enabled = false;
@@ -153,6 +159,18 @@ public class speedUpgrade : MonoBehaviour
         text6shown = true;
 
     }
+
+    IEnumerator showDiffText()
+    {
+        // show game6 win text
+        difPass = 1;
+        difficulty.gameObject.SetActive(true);
+        yield return new WaitForSeconds(4);
+        difficulty.gameObject.SetActive(false);
+
+        textDshown = true;
+
+    }
     void Update()
     {
         // if you win the first game, spped boost! and text 1
@@ -204,6 +222,10 @@ public class speedUpgrade : MonoBehaviour
         {
             TheScript.speed = 35;
             StartCoroutine(showgame5Text());
+        }
+        if(invincibilityFrame.HKwin == true && difPass ==0 && textDshown == false && my_fish.transform.position.y > 150)
+        {
+            StartCoroutine(showDiffText());
         }
     }
 
