@@ -14,7 +14,7 @@ public class heightChanges : MonoBehaviour
         // if u start
         if (SGameMain.SGWin == false/* && ScoreKeeper.gunWin == false/* && invincibilityFrame.HKwin == false*/)
         {
-            p.y = 20;
+            p.y = 15;
 
             gameObject.transform.position = p;
         }
@@ -23,7 +23,7 @@ public class heightChanges : MonoBehaviour
          // if you beat game 1
          if (SGameMain.SGWin == true &&  ScoreKeeper.gunWin == false &&  invincibilityFrame.HKwin == false)
         {
-            p.y = 80;
+            p.y = 70;
 
             gameObject.transform.position = p;
         }
@@ -31,7 +31,7 @@ public class heightChanges : MonoBehaviour
          // if u beat game 2
         if (SGameMain.SGWin == true && ScoreKeeper.gunWin == true && invincibilityFrame.HKwin == false)
         {
-            p.y = 140;
+            p.y = 130;
 
             gameObject.transform.position = p;
         }
@@ -41,7 +41,7 @@ public class heightChanges : MonoBehaviour
         // if you beat game 3
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true && */ invincibilityFrame.HKwin == true)
         {
-            p.y = 220; //338 is the highest limit , -45 is the lowest limit
+            p.y = 200; //338 is the highest limit , -45 is the lowest limit
 
             gameObject.transform.position = p;
         }
@@ -49,14 +49,14 @@ public class heightChanges : MonoBehaviour
         // beat game 4
         if (/*SGameMain.SGWin == true && ScoreKeeper.gunWin == true &&  invincibilityFrame.HKwin == true && */ SGameMain2.SGWin2 == true && ScoreKeeper2.gunWin == false)
         {
-            p.y = 270; //338 is the highest limit , -45 is the lowest limit
+            p.y = 250; //338 is the highest limit , -45 is the lowest limit
 
             gameObject.transform.position = p;
         }
         // beat game 5
         if ( ScoreKeeper2.gunWin == true && invincibilityFrame.HKHARDwin== false)
 
-            p.y = 340; //338 is the highest limit , -45 is the lowest limit
+            p.y = 320; //338 is the highest limit , -45 is the lowest limit
 
         gameObject.transform.position = p;
 

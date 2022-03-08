@@ -49,7 +49,7 @@ public class speedUpgrade : MonoBehaviour
         reachTheSurface.gameObject.SetActive(false);
         killedDivers.gameObject.SetActive(false);
         bigBrain.gameObject.SetActive(false);
-
+        avoidedHooks.gameObject.SetActive(false);
 
 
         textShown = false;
@@ -102,6 +102,7 @@ public class speedUpgrade : MonoBehaviour
         text3shown = true;
 
     }
+
 
 
 

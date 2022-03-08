@@ -254,7 +254,7 @@ public class fishHealth : MonoBehaviour
         }
 
 
-        if (my_fish.transform.position.y >= 337 && invincibilityFrame.HKHARDwin == true)
+        if (my_fish.transform.position.y >= 337 && coinCountUI.numCoinsCollected >=10)
         {
             SceneManager.LoadScene("Win Screen2");
 
