@@ -15,6 +15,7 @@ public class speedUpgrade : MonoBehaviour
     public static int game3win = 0;
     public static int game6win = 0;
     public static int game4win = 0;
+    public static int game5win = 0;
 
     ctrl TheScript;
     GameObject TheGameController;
@@ -26,9 +27,11 @@ public class speedUpgrade : MonoBehaviour
 
     public Text killedDivers;  // text after game 2
 
-    public Text avoidedHooks;
+    public Text avoidedHooks;// TEXT AFTER GAME 3
 
     public Text bigBrain; // text after beating game 4
+
+    public Text diver2; // text after beating game 5
 
     bool textShown;
 
@@ -40,6 +43,8 @@ public class speedUpgrade : MonoBehaviour
 
     bool text4shown;
 
+    bool text5shown;
+
 
     void Start()
     {
@@ -50,6 +55,8 @@ public class speedUpgrade : MonoBehaviour
         killedDivers.gameObject.SetActive(false);
         bigBrain.gameObject.SetActive(false);
         avoidedHooks.gameObject.SetActive(false);
+        diver2.gameObject.SetActive(false);
+
 
 
         textShown = false;
@@ -57,6 +64,8 @@ public class speedUpgrade : MonoBehaviour
         text3shown = false;
         text6shown = false;
         text4shown = false;
+        text5shown = false;
+
 
 
         fin_item.GetComponent<Image>().enabled = false;
@@ -106,17 +115,7 @@ public class speedUpgrade : MonoBehaviour
 
 
 
-    IEnumerator showgame6Text()
-    {
-        // show game6 win text
-        game6win = 1;
-        reachTheSurface.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
-        reachTheSurface.gameObject.SetActive(false);
-
-        text6shown = true;
-
-    }
+   
 
     IEnumerator showgame4Text()
     {
@@ -130,7 +129,30 @@ public class speedUpgrade : MonoBehaviour
 
 
     }
+    IEnumerator showgame5Text()
+    {
+        // show game 5 win text
+        game5win = 1;
+        diver2.gameObject.SetActive(true);
 
+        yield return new WaitForSeconds(2);
+        diver2.gameObject.SetActive(false);
+        text5shown = true;
+
+
+    }
+
+    IEnumerator showgame6Text()
+    {
+        // show game6 win text
+        game6win = 1;
+        reachTheSurface.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        reachTheSurface.gameObject.SetActive(false);
+
+        text6shown = true;
+
+    }
     void Update()
     {
         // if you win the first game, spped boost! and text 1
@@ -177,6 +199,11 @@ public class speedUpgrade : MonoBehaviour
         if (SGameMain2.SGWin2 == true && game4win == 0 && text4shown == false)
         {
             StartCoroutine(showgame4Text());
+        }
+        if (ScoreKeeper2.gunWin == true && game5win == 0 && text5shown == false)
+        {
+            TheScript.speed = 35;
+            StartCoroutine(showgame5Text());
         }
     }
 

@@ -104,15 +104,17 @@ public class fishHealth : MonoBehaviour
         speedUpgrade.game2Win = 0;
         speedUpgrade.game3win = 0;
         speedUpgrade.game6win = 0;
+        speedUpgrade.game5win = 0;
 
         invincibilityFrame.HKwin = false;
 
         SGameMain.SGWin = false;
         ScoreKeeper.gunWin = false;
         ScoreKeeper.playerScore = 0;
-
-        invincibilityFrame.HKHARDwin = false;
         SGameMain2.SGWin2 = false;
+        ScoreKeeper2.gunWin = false;
+        invincibilityFrame.HKHARDwin = false;
+       
 
 
         coinCountUI.numCoinsCollected = 0;
