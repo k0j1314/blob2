@@ -104,6 +104,7 @@ public class fishHealth : MonoBehaviour
         speedUpgrade.game2Win = 0;
         speedUpgrade.game3win = 0;
         speedUpgrade.game6win = 0;
+        speedUpgrade.game4win = 0;
         speedUpgrade.game5win = 0;
         speedUpgrade.difPass = 0;
     invincibilityFrame.HKwin = false;
