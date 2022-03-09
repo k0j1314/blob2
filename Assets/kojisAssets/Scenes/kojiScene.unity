@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Text: 'THE WATER PRESSURE IS TOO MUCH TO HANDLE NOW
 
     THERE MUST BE SOMETHING
-    I CAN GET...'
+    I CAN DO...'
 --- !u!222 &8716556
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2361,7 +2361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 26.3, y: 12.6}
+  m_AnchoredPosition: {x: -355, y: 84.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &192776428

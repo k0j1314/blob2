@@ -12,6 +12,7 @@ public class Hearts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        heart = 5;
         healthRemaining = heart;
         heart = healthRemaining;
     }
