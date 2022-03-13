@@ -45,7 +45,8 @@ public class coinCountUI : MonoBehaviour
             coins = numCoinsCollected;
             coinCount.text = coins.ToString() + "/10";
 
-
+            Debug.Log(coins);
+            Debug.Log(numCoinsCollected);
         }
 
     }
