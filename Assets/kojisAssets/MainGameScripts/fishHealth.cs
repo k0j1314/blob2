@@ -41,7 +41,7 @@ public class fishHealth : MonoBehaviour
         // healthRemaining = int.Parse(healthNumber.text);
         health = healthRemaining;
         healthNumber.text = healthRemaining.ToString();
-        
+
 
         // mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -50,7 +50,7 @@ public class fishHealth : MonoBehaviour
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
-        
+
 
         isInvincible = true;
 
@@ -97,7 +97,7 @@ public class fishHealth : MonoBehaviour
     }
 
     void resetValues()
-        // resets all the static values so that u can play the game again!
+    // resets all the static values so that u can play the game again!
     {
         health = 3;
         speedUpgrade.game1Win = 0;
@@ -107,7 +107,7 @@ public class fishHealth : MonoBehaviour
         speedUpgrade.game4win = 0;
         speedUpgrade.game5win = 0;
         speedUpgrade.difPass = 0;
-    invincibilityFrame.HKwin = false;
+        invincibilityFrame.HKwin = false;
 
         SGameMain.SGWin = false;
         ScoreKeeper.gunWin = false;
@@ -115,7 +115,7 @@ public class fishHealth : MonoBehaviour
         SGameMain2.SGWin2 = false;
         ScoreKeeper2.gunWin = false;
         invincibilityFrame.HKHARDwin = false;
-       
+
 
 
         coinCountUI.numCoinsCollected = 0;
@@ -166,14 +166,14 @@ public class fishHealth : MonoBehaviour
             //  StartCoroutine("wait");
 
         }
-       /* if (col.gameObject.CompareTag("Undefined"))
-        {
-            col.gameObject.SetActive(false);
-            Debug.Log("kdjnsvbjhkvb");
+        /* if (col.gameObject.CompareTag("Undefined"))
+         {
+             col.gameObject.SetActive(false);
+             Debug.Log("kdjnsvbjhkvb");
 
-        }
-       */
-        
+         }
+        */
+
     }
 
 
@@ -194,7 +194,7 @@ public class fishHealth : MonoBehaviour
         {
             tooHigh();
             heightWarning.gameObject.SetActive(true);
-        }   
+        }
 
         if (my_fish.transform.position.y <= height)
             heightWarning.gameObject.SetActive(false);
@@ -222,14 +222,17 @@ public class fishHealth : MonoBehaviour
             damageScreen.GetComponent<Image>().color = color;
         }
 
-        if (my_fish.transform.position.y >= 345 && coinCountUI.numCoinsCollected < 10)
+        if (my_fish.transform.position.y >= 345)
         {
             // IF YOU BEAT THE GAME, RESET ALL THE STATIC VARIABLES
             // i know i should have this as a single method, but ur stuck with this, deal with it
             // exactly the same as the thing from  die() earlier
-            SceneManager.LoadScene("Win Screen");
+            if (coinCountUI.numCoinsCollected >= 10)
+            {
+                SceneManager.LoadScene("Win Screen2");
 
-            resetValues();
+                resetValues();
+            }
             /*
              * health = 3;
             speedUpgrade.game1Win = 0;
@@ -252,16 +255,12 @@ public class fishHealth : MonoBehaviour
 
             oneUp.healthCollectedArray = new bool[] { false, false, false };
             */
+            else
+            {
+                SceneManager.LoadScene("Win Screen");
 
-
-        }
-
-
-        else if (my_fish.transform.position.y >= 345 && coinCountUI.numCoinsCollected >=10)
-        {
-            SceneManager.LoadScene("Win Screen2");
-
-            resetValues();
+                resetValues();
+            }
         }
 
 

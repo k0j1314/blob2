@@ -626,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9068830691369413654, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9068830691369413654, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -634,11 +634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9068830691369413654, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9068830691552345848, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9068830691552345849, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9068830692282660510, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9068830692282660511, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9068830692485878143, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.0001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9068830692485878143, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -867,6 +867,10 @@ PrefabInstance:
     - target: {fileID: 9068830692557731053, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068830692557731053, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9068830692607751320, guid: 30228caaf149ba54e91c7e06326624cb, type: 3}
       propertyPath: m_fontSize
